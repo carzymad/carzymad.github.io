@@ -54,6 +54,12 @@
 	z-index: 99;
 	}
  
+	.messageBox {
+		padding: 10px 10px 10px 10px;
+		margin-bottom: 20px;
+		border: solid 1px #b4b4b4;
+		background-color: #fff;
+	}
 
 	a {
 		color: #757575;
@@ -241,7 +247,6 @@
   });
   </script>
 
-  </style>
   <script>
   $(function() {
     $( ".ui-widget-content" ).draggable();
@@ -362,9 +367,9 @@
 
 
     <div class="container" style="width: 1024px;">
-	<div class="row navbar-fixed-top" style="background-color: #474747;">
+	<div class="row navbar-fixed-top" style="background-color: #474747; padding: 0 150px 0 150px">
 		<div class="col-md-12">
-			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px;">
 				<div class="navbar-header">
 					 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -416,7 +421,7 @@
 					</form>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="user01.html"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+							<a href="#"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
 						</li>
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"   style="color: #eeeeee">消息<strong class="caret"></strong></a>
@@ -472,394 +477,86 @@
 			</div>-->
 		</div>
 	</div>
+	<!--><div class="row" style="height: 200px;">	<!-- 首页大图片 
+		<div class="col-md-12" >
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
+		</div>
+	</div>-->
 	<div class="row" style="height: 200px; margin-top: 50px;">	<!-- 首页大图片 -->
 		<div class="col-md-12" style=" padding: 0px 0px 0px 0px;">
 			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
 			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
 		</div>
 	</div>
-
-	<div class="row" style="margin-top: 80px;">
-		<div class="col-md-12" style="padding: 0px 0px 0px 0px;">
-			<ul class="nav nav-tabs">
-				<li class="active">
-					<a href="#">首页</a>
-				</li>
-				<li>
-					<a href="#">公益动态</a>
-				</li>
-				<li>
-					<a href="#">项目资源</a>
-				</li>
-				<li>
-					<a href="#">企业公益</a>
-				</li>
-				<li>
-					<a href="#">社区公益</a>
-				</li>
-				<li>
-					<a href="#">公益论坛</a>
-				</li>
-				<li>
-					<a href="#">关于我们</a>
-				</li>
-				<!--<li class="dropdown pull-right">
-					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="#">Action</a>
-						</li>
-						<li>
-							<a href="#">Another action</a>
-						</li>
-						<li>
-							<a href="#">Something else here</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">Separated link</a>
-						</li>
-					</ul>
-				</li>-->
-			</ul>
-		</div>
-	</div>
 	
-	<div class="row" style="margin-top: 20px;">
-		<div class="col-md-5">
-			<h3 style="float: left">
-				<a href="#">热门公益活动</a>
-			</h3>
-			<a href="#"><img src="fire.gif"></img></a>
-			<!--<a  href="#" style="float: left; margin-right: 10px;">更多</a>-->  
-		</div>
-		<div class="col-md-7" >
-			<h3 style="float: left">
-				<a href="#" >综合信息发布</a>
-			</h3>
-			<a href="#"><img src="fire.gif"></img></a>
-			<!--<a href="#" style="margin-right: 10px; float: left;">更多</a>-->
-		</div>
-	</div>
-	<div class="row" > <!-- 热门公益活动 -->
-       
-		<div class="col-md-5" style=" border-right:solid 1px #b4b4b4; margin-top: 10px; padding: 0px 15px 0px 0px;">
-			 
-			<table class="table">
-				<thead>
-					<tr>
-						<th>
-							名次
-						</th>
-						<th>
-							项目
-						</th>
-						<th>
-							发起人
-						</th>
-						<th>
-							截止时间
-						</th>
-					</tr>
-				</thead>
-				
-		</table>
-<div id="accordion">
-  
-  <h3>1&nbsp;&nbsp;&nbsp;&nbsp;甘肃支教&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div style="height: 200px;">
-	<h4><a href="project01.html">甘肃支教</a></h4>
-    <p>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;六月底，在中华支教网和豆瓣搜索了一些支教招募队员的团队，选择了上海向阳花青年公益社发起的支教活动。<br />
-    </p>
-  </div>
-  <h3>2&nbsp;&nbsp;&nbsp;&nbsp;奉化支教&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div>
-    <p>
-    
-    </p>
-  </div>
-  <h3>3&nbsp;&nbsp;&nbsp;&nbsp;温暖西部计划&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div>
-    <p>
-  
-    </p>
-  </div>
-  <h3>4&nbsp;&nbsp;&nbsp;&nbsp;公益大讲堂&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div>
-    <p>
-   
-    </p>
-    <p>
-   
-    </p>
-  </div>
-</div>
-				<table class="table">
-				<tbody>
-					<tr class="danger">
-						<td>
-							5
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							6
-						</td>
-						<td>
-							<a href="#">奉化支教</a>
-						</td>
-						<td>
-							<a href="user01.html">宁工团委</a>
-						</td>
-						<td>
-							xx/xx/2016
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							7
-						</td>
-						<td>
-							<a href="#">“公益大讲堂”</a>
-						</td>
-						<td>
-							<a href="user02.html">crazy_mad</a> 
-						</td>
-						<td>
-							02/04/2016
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							8
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="user03.html">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							9
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							10
-						</td>
-						<td>
-							<a href="#">奉化支教</a>
-						</td>
-						<td>
-							<a href="#">宁工团委</a>
-						</td>
-						<td>
-							xx/xx/2016
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							11
-						</td>
-						<td>
-							<a href="#">“公益大讲堂”</a>
-						</td>
-						<td>
-							<a href="#">crazy_mad</a> 
-						</td>
-						<td>
-							02/04/2016
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							12
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							13
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							14
-						</td>
-						<td>
-							<a href="#">奉化支教</a>
-						</td>
-						<td>
-							<a href="#">宁工团委</a>
-						</td>
-						<td>
-							xx/xx/2016
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							15
-						</td>
-						<td>
-							<a href="#">“公益大讲堂”</a>
-						</td>
-						<td>
-							<a href="#">crazy_mad</a> 
-						</td>
-						<td>
-							02/04/2016
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							16
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							17
-						</td>
-						<td><a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<ul class="pagination" style="margin-left: 10px; margin-top: 0px;">
-				<li>
-					<a href="#">上一页</a>
-				</li>
-				<li>
-					<a href="#">1</a>
-				</li>
-				<li>
-					<a href="#">2</a>
-				</li>
-				<li>
-					<a href="#">3</a>
-				</li>
-				<li>
-					<a href="#">4</a>
-				</li>
-				<li>
-					<a href="#">5</a>
-				</li>
-				<li>
-					<a href="#">6</a>
-				</li>
-				<li>
-					<a href="#">7</a>
-				</li>
-				<li>
-					<a href="#">下一页</a>
-				</li>
-			</ul>
-		</div>
-		<div class="col-md-7" style="padding: 0px 0px 0px 15px;">
-			<div class="carousel slide" id="carousel-110777" style="margin-top: 10px;">
-				<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#carousel-110777">
-					</li>
-					<li data-slide-to="1" data-target="#carousel-110777">
-					</li>
-					<li data-slide-to="2" data-target="#carousel-110777">
-					</li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<img alt="Carousel Bootstrap First" src="公益图片1.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								First Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img alt="Carousel Bootstrap Second" src="公益图片2.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								Second Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img alt="Carousel Bootstrap Third" src="公益图片3.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								Third Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-				</div> <a class="left carousel-control" href="#carousel-110777" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-110777" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	<div class="row" style="margin-left: 0px; margin-right: 0px; margin-top: 70px; padding: 0 0 0 0;">
+		<div class="col-md-3" style="background-color: #ffffff; border: 1px solid #d2d2d2; padding: 15px 15px 15px 15px;">
+			<font size="4" style="">项目发起人</font>
+			<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+				<a href="user01.html"><img src="头像01.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+				<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="user01.html">宁工团委</a></strong></font>
 			</div>
+			<hr />
+			
+			<font size="4" style="">项目参与人</font>
+			<ul class="list-unstyled" style="margin-left: 20px; margin-top: ">
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user02.html"><img src="头像02.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr02.html">crazy_mad</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user03.html"><img src="头像03.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr03.html">宁工社联</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user04.html"><img src="头像04.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr04.html">宁工学生会</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user05.html"><img src="头像05.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr05.html">海边的斜阳</a></strong></font>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9" style="padding: 0px 0px 0px 15px">
+			<div class="messageBox" style="padding: 20px 20px 20px 20px;">
+				<div style="text-align: center; margin-bottom: 70px;">
+					<h3 style="margin-bottom: 0px;"><font color="#cc0033"><strong>2015年西城区德胜街道购买社会力量服务项目（第一批）</strong></font></h3> <br />
+					<font style="padding: 0px 10px 0 10px;" color="#616161">浏览次数:20</font>
+					<font style="padding: 0px 10px 0 10px;" color="#616161">更新时间:2015-04-01 14:22:38</font>
+					<font style="padding: 0px 10px 0 10px;" color="#616161">编辑:admin</font>
+				</div>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为加大政府转移职能及政府购买服务项目的力度，激发社会活力，形成多元参与社会治理的新格局，促进购买项目的服务效果，西城区德胜街道现将拟购买的服务项目（第一批）发布如下，请有意承接的单位按照以下流程完成合作申请。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1、请有意承接的单位，将机构执照电子版、单位简介（限500字内）、成功案例（每个案例的字数不得少于500字、可提供多个案例）、联系人及联系方式、有意承接的项目名称（见下文）等基本信息于2015年4月10日前发送至：120682568@qq.com</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、德胜街道将于4月20-24日邀请提交上述基本信息的单位公开进行竞争性洽谈，并根据洽谈结果最终确定承接单位，签署合同。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、对承接单位的遴选流程，遵循公开、公正、透明的原则，由德胜街道枢纽型社会组织“北京市西城区公益文化传播中心”具体执行。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;咨询联络：010-82023017、18614049851、刘婧女士</font> <br /> <br />
+				<font>一、项目名称：全民阅读之读书漂流</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实施周期：1年</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金额度：52700元</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务人群：地区单位和居民</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容描述：以“阅读·漂流·分享”为主题的“德胜书苑”年度读书活动，依托“今日德胜”报和微信公众平台，通过线上互动报名和读书沙龙的线下心得分享，每两个月一个主题，带领地区青年、居民围绕一本好书，一起重温翻阅书本的快乐，体验握笔书写的畅快，感受面对面交流的温暖。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;预期指标：全年六次，每两个月一个主题，设四个漂流岛。在4月25日全民阅读日前举办启动仪式。受众群体2000人，面向地区单位和居民。围绕一本好书，一起重温翻阅书本的快乐，体验握笔书写的畅快，感受面对面交流的温暖。通过读书漂流，阅读分享，让更多的德胜人加入到快乐的读书活动中来。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 承接要求：承接单位限定为登记类社会组织（须为西城区或市级）或服务类企业。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评估方式：由第三方参与项目跟踪评估、中末期评估。</font> <br /><br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				
+			</div>
+			
 		</div>
 	</div>
-	
+		
 	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
 	</div>
 	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">

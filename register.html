@@ -23,6 +23,25 @@
 	
 	<style>
 	
+	fieldset {
+      border: 0;
+	  margin-top: 0px;
+	  float: left;
+	  
+    }
+    label {
+      display: block;
+      margin: 0px 0 0 0;
+    }
+    select {
+      width: 100px;
+	  background-color: #fff;
+    }
+    .overflow {
+      height: 200px;
+    }
+
+
 	#float li {
 		height: 50px;	
 	}
@@ -36,7 +55,7 @@
 		background-color: #ffffff;
 		border: 1px solid #d2d2d2;
 	}
-
+	
 	div.fixed
 	{
 	width:72px;
@@ -53,8 +72,8 @@
 	line-height: 70px;	
 	z-index: 99;
 	}
- 
-
+	
+	
 	a {
 		color: #757575;
 	}
@@ -241,7 +260,19 @@
   });
   </script>
 
-  </style>
+  <script>
+  $(function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+  });
+  </script>
+
   <script>
   $(function() {
     $( ".ui-widget-content" ).draggable();
@@ -321,9 +352,9 @@
     }
   };
   </script>
-
+	
   </head>
-  <body style="background-color: #f9f9f9">
+  <body style="background-color: #fff">
 
   <div class="fixed ui-widget-content" id="float"><a href="#"></a>
 	<div id="float-son">
@@ -362,14 +393,13 @@
 
 
     <div class="container" style="width: 1024px;">
-	<div class="row navbar-fixed-top" style="background-color: #474747;">
+	<div class="row navbar-fixed-top" style="background-color: #fff; border:solid 1px #b4b4b4;">
 		<div class="col-md-12">
 			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
 				<div class="navbar-header">
-					 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="index.html" style="color: #c2c2c2;">大学生公益服务信息平台</a>
+					</button> <a class="navbar-brand" href="index.html" style="color: #000;"><strong>大学生公益服务信息平台</strong></a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -416,10 +446,10 @@
 					</form>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="user01.html"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+							<a href="#"  style="color: #474747"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"   style="color: #eeeeee">消息<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="color: #474747;">消息<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
@@ -450,10 +480,10 @@
 						</li>
 						
 						<li>
-							<a href="register.html"  style="color: #eeeeee">注册</a>
+							<a href="register.html"  style="color: #474747">注册</a>
 						</li>
 						<li>
-							<a href="#" style="color: #eeeeee" id="create-user">登陆</a>
+							<a href="#" style="color:#474747" id="create-user">登陆</a>
 						</li>
 					</ul>
 				</div>
@@ -472,402 +502,194 @@
 			</div>-->
 		</div>
 	</div>
-	<div class="row" style="height: 200px; margin-top: 50px;">	<!-- 首页大图片 -->
-		<div class="col-md-12" style=" padding: 0px 0px 0px 0px;">
-			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
-			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
-		</div>
+	<div class="row" style="background-size:100%; background:url(云层.png); height: 120px; margin-top: 50px;">
+		
 	</div>
-
-	<div class="row" style="margin-top: 80px;">
-		<div class="col-md-12" style="padding: 0px 0px 0px 0px;">
-			<ul class="nav nav-tabs">
-				<li class="active">
-					<a href="#">首页</a>
-				</li>
-				<li>
-					<a href="#">公益动态</a>
-				</li>
-				<li>
-					<a href="#">项目资源</a>
-				</li>
-				<li>
-					<a href="#">企业公益</a>
-				</li>
-				<li>
-					<a href="#">社区公益</a>
-				</li>
-				<li>
-					<a href="#">公益论坛</a>
-				</li>
-				<li>
-					<a href="#">关于我们</a>
-				</li>
-				<!--<li class="dropdown pull-right">
-					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="#">Action</a>
-						</li>
-						<li>
-							<a href="#">Another action</a>
-						</li>
-						<li>
-							<a href="#">Something else here</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">Separated link</a>
-						</li>
-					</ul>
-				</li>-->
-			</ul>
-		</div>
-	</div>
-	
-	<div class="row" style="margin-top: 20px;">
-		<div class="col-md-5">
-			<h3 style="float: left">
-				<a href="#">热门公益活动</a>
-			</h3>
-			<a href="#"><img src="fire.gif"></img></a>
-			<!--<a  href="#" style="float: left; margin-right: 10px;">更多</a>-->  
-		</div>
-		<div class="col-md-7" >
-			<h3 style="float: left">
-				<a href="#" >综合信息发布</a>
-			</h3>
-			<a href="#"><img src="fire.gif"></img></a>
-			<!--<a href="#" style="margin-right: 10px; float: left;">更多</a>-->
-		</div>
-	</div>
-	<div class="row" > <!-- 热门公益活动 -->
-       
-		<div class="col-md-5" style=" border-right:solid 1px #b4b4b4; margin-top: 10px; padding: 0px 15px 0px 0px;">
-			 
-			<table class="table">
-				<thead>
-					<tr>
-						<th>
-							名次
-						</th>
-						<th>
-							项目
-						</th>
-						<th>
-							发起人
-						</th>
-						<th>
-							截止时间
-						</th>
-					</tr>
-				</thead>
-				
-		</table>
-<div id="accordion">
-  
-  <h3>1&nbsp;&nbsp;&nbsp;&nbsp;甘肃支教&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div style="height: 200px;">
-	<h4><a href="project01.html">甘肃支教</a></h4>
-    <p>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;六月底，在中华支教网和豆瓣搜索了一些支教招募队员的团队，选择了上海向阳花青年公益社发起的支教活动。<br />
-    </p>
-  </div>
-  <h3>2&nbsp;&nbsp;&nbsp;&nbsp;奉化支教&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div>
-    <p>
-    
-    </p>
-  </div>
-  <h3>3&nbsp;&nbsp;&nbsp;&nbsp;温暖西部计划&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div>
-    <p>
-  
-    </p>
-  </div>
-  <h3>4&nbsp;&nbsp;&nbsp;&nbsp;公益大讲堂&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁工团委&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx/xx/2016</h3>
-  <div>
-    <p>
-   
-    </p>
-    <p>
-   
-    </p>
-  </div>
-</div>
-				<table class="table">
-				<tbody>
-					<tr class="danger">
-						<td>
-							5
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							6
-						</td>
-						<td>
-							<a href="#">奉化支教</a>
-						</td>
-						<td>
-							<a href="user01.html">宁工团委</a>
-						</td>
-						<td>
-							xx/xx/2016
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							7
-						</td>
-						<td>
-							<a href="#">“公益大讲堂”</a>
-						</td>
-						<td>
-							<a href="user02.html">crazy_mad</a> 
-						</td>
-						<td>
-							02/04/2016
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							8
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="user03.html">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							9
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							10
-						</td>
-						<td>
-							<a href="#">奉化支教</a>
-						</td>
-						<td>
-							<a href="#">宁工团委</a>
-						</td>
-						<td>
-							xx/xx/2016
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							11
-						</td>
-						<td>
-							<a href="#">“公益大讲堂”</a>
-						</td>
-						<td>
-							<a href="#">crazy_mad</a> 
-						</td>
-						<td>
-							02/04/2016
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							12
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							13
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							14
-						</td>
-						<td>
-							<a href="#">奉化支教</a>
-						</td>
-						<td>
-							<a href="#">宁工团委</a>
-						</td>
-						<td>
-							xx/xx/2016
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							15
-						</td>
-						<td>
-							<a href="#">“公益大讲堂”</a>
-						</td>
-						<td>
-							<a href="#">crazy_mad</a> 
-						</td>
-						<td>
-							02/04/2016
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							16
-						</td>
-						<td>
-							<a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							17
-						</td>
-						<td><a href="#">西部温暖计划</a>
-						</td>
-						<td>
-							<a href="#">海边的斜阳</a>
-						</td>
-						<td>
-							0x/0x/2016
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<ul class="pagination" style="margin-left: 10px; margin-top: 0px;">
-				<li>
-					<a href="#">上一页</a>
-				</li>
-				<li>
-					<a href="#">1</a>
-				</li>
-				<li>
-					<a href="#">2</a>
-				</li>
-				<li>
-					<a href="#">3</a>
-				</li>
-				<li>
-					<a href="#">4</a>
-				</li>
-				<li>
-					<a href="#">5</a>
-				</li>
-				<li>
-					<a href="#">6</a>
-				</li>
-				<li>
-					<a href="#">7</a>
-				</li>
-				<li>
-					<a href="#">下一页</a>
-				</li>
-			</ul>
-		</div>
-		<div class="col-md-7" style="padding: 0px 0px 0px 15px;">
-			<div class="carousel slide" id="carousel-110777" style="margin-top: 10px;">
-				<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#carousel-110777">
-					</li>
-					<li data-slide-to="1" data-target="#carousel-110777">
-					</li>
-					<li data-slide-to="2" data-target="#carousel-110777">
-					</li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<img alt="Carousel Bootstrap First" src="公益图片1.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								First Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img alt="Carousel Bootstrap Second" src="公益图片2.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								Second Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img alt="Carousel Bootstrap Third" src="公益图片3.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								Third Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-				</div> <a class="left carousel-control" href="#carousel-110777" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-110777" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	<div class="row" style="text-align: center; margin-top: 0px; margin-bottom: 30px;">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-5" style="padding: 0 15px 0 0;">
+					<div style="height:30px; border-bottom:solid 1px #b4b4b4;"></div>
+				</div>
+				<div class="col-md-2">
+					<h2 style="margin-top: 0px;"><strong><font color="#6d6d6d" size="7">注册</font></strong></h2>
+				</div>
+				<div class="col-md-5" style="padding: 0 0 0 15px;">
+					<div style="height:30px; border-bottom:solid 1px #b4b4b4;"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-	
-	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
+	<script>
+		var flag = true;
+		$(function(){
+			$("#exampleInputEmail1").keyup(function(){
+				var line = "";				
+				
+				line = $("#exampleInputEmail1").val();
+				
+				if (line != "由6-12位数字、大小写字母及下划线组成")
+				{
+					var num = line.length;
+					if (num < 6)
+					{
+						if (flag)
+						{
+							$("#label01").html("<font size='2' color='#cc0000'><strong>账号长度过短</strong></font>");
+							flag = false;
+						}
+					}
+					else
+					{
+						$("#label01").html("<font size='2' color='#00cc99'><strong>可以用的账号名</strong></font>");
+						flag = true;
+					}
+				}
+			});
+		});
+
+		var flag2 = true;
+
+		$(function(){
+			$("#exampleInputPassword1").keyup(function(){
+				var line = "";
+
+				line = $("#exampleInputPassword1").val();
+
+				var num = line.length;
+				if (num < 6)
+				{
+					if (flag2)
+					{
+						$("#label02").html("<div style='width: 100px; height: 10px; background-color: #cc3300;'></div><font size='2' color='#cc0000'><strong>密码长度太短</strong></font>")
+					}
+				}
+				else if (num < 10)
+				{
+					if (flag2)
+					{
+						$("#label02").html("<div style='width: 300px; height: 10px; background-color: #ff9900;'></div><font size='2' color='#ff9900'><strong>密码长度适当</strong></font>")
+					}
+				}
+				else if (num > 14)
+				{
+					if (flag2)
+					{
+						$("#label02").html("<div style='width: 400px; height: 10px; background-color: #00cc66;'></div><font size='2'color='#00cc66'><strong>密码长度完美</strong></font>")
+					}			
+				}
+			})
+		})
+		/*$(function(){
+			$("#label03").html("我草泥马！");
+		})*/
+		$(function(){
+			$("#exampleInputPassword2").keyup(function(){
+				var line1 = $("#exampleInputPassword1").val();
+				var line2 = $("#exampleInputPassword2").val();
+				if (line1 != line2)
+				{
+					$("#label03").html("<font color='#cc0000'><strong>两次密码不一致！</strong></font>")
+					return;
+				}
+				{
+					$("#label03").html("<font color='#00cc99'><strong>两次密码一致</strong></font>")
+				}
+			})
+		})
+
+	</script>
+	<div class="row">
+		<div class="col-md-3">
+			
+		</div>
+		<div class="col-md-6">
+			<form role="form">
+				<div class="form-group input-group-lg" style="margin-bottom: 30px;">
+					 
+					<label for="exampleInputEmail1">
+						昵称（用户名）
+					</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" value="crazy_mad"  onfocus="javascript:if(this.value=='crazy_mad')this.value='';" jvdefault="crazy_mad" />
+					<div id="label01"><font size="2" color="#9a9a9a">由6-12位数字、大小写字母及下划线组成</font></div>
+				</div>
+				<div class="form-group input-group-lg" style="margin-bottom: 30px;">
+					 
+					<label for="exampleInputPassword1">
+						密码
+					</label>
+					<input type="password" class="form-control" id="exampleInputPassword1"/>
+					<div id="label02"><font size="2" color="#9a9a9a">由数字及大小写字母组成</font></div>
+				</div>
+				<div class="form-group input-group-lg" style="margin-bottom: 30px;">
+					 
+					<label for="exampleInputPassword1">
+						确认密码
+					</label>
+					<input type="password" class="form-control password02" id="exampleInputPassword2" />
+					<div id="label03"><font size="2" color="#9a9a9a">确认密码无误</font></div>
+				</div>
+				<div style="margin-bottom: 30px;">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row" style="line-height: 100%">
+									<div class="col-md-3" style="padding: 0px 0px 0px 0px;">
+										<fieldset style="height: 44px; margin-top: 0px;">	
+											<select name="speed" id="speed">
+											  <option selected="selected">中国大陆</option>
+											  <option>澳门特区</option>
+											  <option>台湾</option>
+											  <option>美国</option>
+											  <option>香港</option>
+											  <option>比利时</option>
+											  <option>澳大利亚</option>
+											  <option>法国</option>
+											  <option>加拿大</option>
+											  <option>日本</option>
+											</select>
+										</fieldset>
+									</div>
+									<div class="col-md-9 form-group input-group-lg" style="padding: 0px 0px 0px 0px;">
+										<input type="text" class="form-control" id="exampleInputPassword1" value="请填写常用手机号"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div >
+				<div class="form-group" style="margin-bottom: 30px;">
+				
+					<label for="exampleInputFile">
+						上传头像
+					</label>
+					<input type="file" id="exampleInputFile" />
+				</div>
+				<script>
+					$(function(){
+						$("#test01").click(function(){
+							window.location.href="www.baidu.com";
+						})
+					})
+				</script>
+				<div class="form-group input-group-lg" style="margin-bottom: 30px; text-align: center;">
+					<a href="#" type="submit" class="form-control" id="exampleInputPassword1" style="background-color: #fafafa">提交</a>
+					<font size="2" color="#9a9a9a">&nbsp;提交后可进一步完善用户资料</font>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-3">	
+			
+		</div>
+	</div>
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 60px;">
 	</div>
 	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
 		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
 	</div>
-	<div class="row" style="height: 60px;">
-	</div>
 </div>
+	<img src="卡通树.PNG" style="margin-left: 0px; position: absolute; left: 900px; top: 270px; z-index:-1; width: 385px; height: 650px;"></img>
+	<img src="卡通树2.PNG" style="margin-left: 0px; position: absolute; left: 200px; top: 370px; z-index:-1; width: 285px; height: 550px;"></img>
 </div>
 
     <script src="js/bootstrap.min.js"></script>
