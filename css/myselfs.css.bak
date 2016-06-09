@@ -1,0 +1,42 @@
+.hint {
+	display: block;
+	position: fixed;
+	padding: 3px 3px 3px 3px;
+	top: 0px;
+	left: 0px;
+	background-color: #fff;
+	z-index: 999;
+	border: 1px solid #000;
+}
+
+#float li {
+	height: 50px;	
+}
+
+#float-son {
+	position: absolute; 
+	top:70px; 
+	left:10px; 
+	width: 50px;  
+	background-color: none;
+	border: 0px solid #d2d2d2;
+	z-index: 80;
+
+}
+
+div.fixed
+{
+	width:72px;
+	height:72px;
+	display:block;
+	margin:0px; 
+	padding:0px;
+	position:fixed;/* 相对于屏幕定位 */
+	left:100px;/* 横向位置也可用left */
+	bottom:60%;/* 纵向位置也可用top */
+	background-image: url("abc.png");
+	border-radius: 50px;
+	text-align: center;
+	line-height: 70px;	
+	z-index: 99;
+}
