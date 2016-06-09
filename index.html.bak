@@ -22,36 +22,47 @@
     <!--<link rel="stylesheet" href="style.css">-->
 	
 	<style>
-	
+	.hint {
+		display: block;
+		position: fixed;
+		padding: 3px 3px 3px 3px;
+		top: 0px;
+		left: 0px;
+		background-color: #f8f7e0;
+		z-index: 99;
+		border: 1px solid #000;
+	}
+
 	#float li {
 		height: 50px;	
 	}
 
 	#float-son {
 		position: absolute; 
-		top:50px; 
-		left:30px; 
-		width: 100px; 
-		height: 220px; 
-		background-color: #ffffff;
-		border: 1px solid #d2d2d2;
+		top:70px; 
+		left:10px; 
+		width: 50px;  
+		background-color: none;
+		border: 0px solid #d2d2d2;
+		z-index: 80;
+
 	}
 
 	div.fixed
 	{
-	width:72px;
-	height:72px;
-	display:block;
-	margin:0px; 
-	padding:0px;
-	position:fixed;/* 相对于屏幕定位 */
-	left:100px;/* 横向位置也可用left */
-	bottom:60%;/* 纵向位置也可用top */
-	background-image: url("网页助手.png");
-	border-radius: 50px;
-	text-align: center;
-	line-height: 70px;	
-	z-index: 99;
+		width:72px;
+		height:72px;
+		display:block;
+		margin:0px; 
+		padding:0px;
+		position:fixed;/* 相对于屏幕定位 */
+		left:100px;/* 横向位置也可用left */
+		bottom:60%;/* 纵向位置也可用top */
+		background-image: url("网页助手.png");
+		border-radius: 50px;
+		text-align: center;
+		line-height: 70px;	
+		z-index: 99;
 	}
  
 
@@ -321,32 +332,35 @@
     }
   };
   </script>
-
+  
+  <script src="js/myselfs.js"></script>
+  
   </head>
   <body style="background-color: #f9f9f9">
-
+  <div class="hint" id="hint">陈家乐</div>
+  
   <div class="fixed ui-widget-content" id="float"><a href="#"></a>
-	<div id="float-son">
+    <div id="float-son">
 		<ul class="list-unstyled">
 			<li>
-				<a href="#">返回顶部</a>
+				<a href="#" id="top"><img alt="Bootstrap Image Preview" src="images/gotop.png" class="img-circle" style="float: right;"/></a><br />
 			</li>
 			<li>
-				<a href="index.html">返回首页	</a>
+				<a href="index.html" id="index"><img alt="Bootstrap Image Preview" src="images/index.png" class="img-circle" style="float: right;"/></a>	
 			</li>
 			<li> 
-				<a href="message1.html">消息中心</a>
+				<a href="message1.html" id="gotomessage"><img alt="Bootstrap Image Preview" src="images/gotomessage.png" class="img-circle" style="float: right;"/></a>	
 			</li>
 			<li>
-				<a href="#">网页导航</a>
+				<a href="#" id="gotonavigation"><img alt="Bootstrap Image Preview" src="images/gotonavigation.png" class="img-circle" style="float: right;"/></a>	
 			</li>
 			<li>
-				
+				<a href="#" id="bottom"><img alt="Bootstrap Image Preview" src="images/gobottom.png" class="img-circle" style="float: right;"/></a><br />
 			</li>
 		</ul>
 	</div>
   </div>
-
+    
 	<div id="dialog-form" title="登陆">
 	  <p class="validateTips">所有选项必填</p>
 	 
@@ -358,9 +372,9 @@
 		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
 	  </fieldset>
 	  </form>
-	</div>
-
-
+	</div> 
+    
+    
     <div class="container" style="width: 1024px;">
 	<div class="row navbar-fixed-top" style="background-color: #474747;">
 		<div class="col-md-12">
@@ -864,6 +878,8 @@
 	</div>
 	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
 		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
+	</div>
+	<div class="row" style="height: 60px;">
 	</div>
 </div>
 </div>
