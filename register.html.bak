@@ -12,6 +12,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+	<link href="css/myselfs.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
 	
@@ -20,7 +21,8 @@
     <script src="js/jquery-2.2.4.js"></script>
     <script src="jquery-ui/jquery-ui.js"></script>
     <!--<link rel="stylesheet" href="style.css">-->
-	
+	  <script src="js/myselfs.js"></script>
+
 	<style>
 	
 	fieldset {
@@ -41,38 +43,6 @@
       height: 200px;
     }
 
-
-	#float li {
-		height: 50px;	
-	}
-
-	#float-son {
-		position: absolute; 
-		top:50px; 
-		left:30px; 
-		width: 100px; 
-		height: 220px; 
-		background-color: #ffffff;
-		border: 1px solid #d2d2d2;
-	}
-	
-	div.fixed
-	{
-	width:72px;
-	height:72px;
-	display:block;
-	margin:0px; 
-	padding:0px;
-	position:fixed;/* 相对于屏幕定位 */
-	left:100px;/* 横向位置也可用left */
-	bottom:60%;/* 纵向位置也可用top */
-	background-image: url("网页助手.png");
-	border-radius: 50px;
-	text-align: center;
-	line-height: 70px;	
-	z-index: 99;
-	}
-	
 	
 	a {
 		color: #757575;
@@ -356,23 +326,32 @@
   </head>
   <body style="background-color: #fff">
 
-  <div class="fixed ui-widget-content" id="float"><a href="#"></a>
-	<div id="float-son">
+   <body style="background-color: #f9f9f9">
+  <div class="hint" id="hint">陈家乐</div>
+  
+  <div class="fixed ui-widget-content" id="float" style="background-image: url('网页助手.png');"><a href="#"></a>
+    <div id="float-son">
 		<ul class="list-unstyled">
 			<li>
-				<a href="#">返回顶部</a>
+				<a href="#" id="top"><img alt="Bootstrap Image Preview" src="images/gotop.png" class="img-rounded" style="float: right;"/></a><br />
 			</li>
 			<li>
-				<a href="index.html">返回首页	</a>
+				<a href="index.html" id="index"><img alt="Bootstrap Image Preview" src="images/index.png" class="img-rounded" style="float: right;"/></a>	
 			</li>
 			<li> 
-				<a href="message1.html">消息中心</a>
+				<a href="message1.html" id="gotomessage"><img alt="Bootstrap Image Preview" src="images/gotomessage.png" class="img-rounded" style="float: right;"/></a>	
 			</li>
 			<li>
-				<a href="#">网页导航</a>
+				<a href="#" id="gotonavigation"><img alt="Bootstrap Image Preview" src="images/gotonavigation.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<!--<li>
+				<a href="#" id="closeassistant"><img alt="Bootstrap Image Preview" src="images/close.png" class="img-rounded" style="float: right;"/></a>	
+			</li>-->
+			<li>
+				<a id="_fixed"><img alt="Bootstrap Image Preview" src="images/fixed.png" class="img-rounded" style="float: right;"/></a>	
 			</li>
 			<li>
-				
+				<a href="#" id="bottom"><img alt="Bootstrap Image Preview" src="images/gobottom.png" class="img-rounded" style="float: right;"/></a><br />
 			</li>
 		</ul>
 	</div>
@@ -541,7 +520,7 @@
 					}
 					else
 					{
-						$("#label01").html("<font size='2' color='#00cc66'><strong>可以用的账号名</strong></font>");
+						$("#label01").html("<font size='2' color='#00cc99'><strong>可以用的账号名</strong></font>");
 						flag = true;
 					}
 				}
