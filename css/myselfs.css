@@ -11,17 +11,20 @@
 
 #float li {
 	height: 50px;	
+	margin-bottom: 5px;
+	width: 50px;
+	text-align: center;	
 }
 
 #float-son {
 	position: absolute; 
 	top:70px; 
 	left:10px; 
-	width: 50px;  
+	width: 80px;  
 	background-color: none;
 	border: 0px solid #d2d2d2;
 	z-index: 80;
-
+	text-align: center;
 }
 
 div.fixed
@@ -38,4 +41,71 @@ div.fixed
 	text-align: center;
 	line-height: 70px;	
 	z-index: 99;
+}
+
+.index-img01 
+{
+	height: 250px;
+	width: 250px;
+	z-index: 1;
+	position: relative;	
+	float: left;
+}
+
+.index-img02
+{
+	height: 250px;
+	width: 250px;
+	z-index: 1;
+	position: relative;	
+	float: right;
+}
+
+.index-img-son
+{
+	z-index: 2;
+	top: 200px;
+	text-align: center;
+	width: 250px;
+}	
+
+.index-img-son font
+{
+	z-index: 1;
+	color: #fff;
+
+}
+
+.scrub
+{
+	-webkit-filter:blur(0px);
+	position: absolute;	
+	height: 250px;
+	width: 250px;
+	z-index: 2;
+	border-radius: 5px;
+}
+
+.after-scrub
+{
+	position: absolute;
+	z-index: 1;
+	height: 250px;
+	width: 250px;
+	border-radius: 5px;
+}
+
+.index-img01 a
+{
+	color: #fff;
+}
+
+.index-img02 a
+{
+	color: #fff;
+}
+
+.clear
+{
+	clear: both;
 }
