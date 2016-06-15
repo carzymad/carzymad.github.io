@@ -104,3 +104,8 @@ div.fixed
 {
 	color: #fff;
 }
+
+.clear
+{
+	clear: both;
+}

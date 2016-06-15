@@ -25,25 +25,13 @@
 
 	<style>
 	
-	fieldset {
-      border: 0;
-	  margin-top: 0px;
-	  float: left;
-	  
-    }
-    label {
-      display: block;
-      margin: 0px 0 0 0;
-    }
-    select {
-      width: 100px;
-	  background-color: #fff;
-    }
-    .overflow {
-      height: 200px;
-    }
+	.messageBox {
+		padding: 10px 10px 10px 10px;
+		margin-bottom: 20px;
+		border: solid 1px #b4b4b4;
+		background-color: #fff;
+	}
 
-	
 	a {
 		color: #757575;
 	}
@@ -62,18 +50,6 @@
 		float: left;
 	}
 
-	.leftBox
-	{
-		text-align: right;
-		padding: 10px 20px 10px 10px; 
-	}
-	.rightBox
-	{
-		text-align: left;
-		padding: 10px 10px 20px 10px;
-	}
-	
-
     label, input { display:block; }
     input.text { margin-bottom:12px; width:95%; padding: .4em; }
     fieldset { padding:0; border:0; margin-top:25px; }
@@ -86,24 +62,9 @@
 	.ui-menu { width: 100px;}
 
 	</style>
-
-
   <script>
   $(function() {
     $( "#menu" ).menu();
-  });
-  </script>
-
-  <script>
-  $(function() {
-    $( "#speed" ).selectmenu();
- 
-    $( "#files" ).selectmenu();
- 
-    $( "#number" )
-      .selectmenu()
-      .selectmenu( "menuWidget" )
-        .addClass( "overflow" );
   });
   </script>
 
@@ -186,9 +147,9 @@
     }
   };
   </script>
-	
+
   </head>
-  <body style="background-color: #fff">
+  <body style="background-color: #f9f9f9">
 
    <body style="background-color: #f9f9f9">
   <div class="hint" id="hint">陈家乐</div>
@@ -239,16 +200,50 @@
 
 
     <div class="container" style="width: 1024px;">
-	<div class="row navbar-fixed-top" style="background-color: #fff; border:solid 1px #b4b4b4;">
+	<div class="row navbar-fixed-top" style="background-color: #474747; padding: 0 150px 0 150px">
 		<div class="col-md-12">
-			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px;">
 				<div class="navbar-header">
+					 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="index.html" style="color: #000;"><strong>大学生公益服务信息平台</strong></a>
+					</button> <a class="navbar-brand" href="index.html" style="color: #c2c2c2;">大学生公益服务信息平台</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!--<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Link</a>
+						</li>
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>-->
+					
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
 							<input type="text" class="form-control">
@@ -259,10 +254,10 @@
 					</form>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="#"  style="color: #474747"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+							<a href="#"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="color: #474747;">消息<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"   style="color: #eeeeee">消息<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
@@ -293,145 +288,81 @@
 						</li>
 						
 						<li>
-							<a href="register.html"  style="color: #474747">注册</a>
+							<a href="register.html"  style="color: #eeeeee">注册</a>
 						</li>
 						<li>
-							<a href="#" style="color:#474747" id="create-user">登陆</a>
+							<a href="#" style="color: #eeeeee" id="create-user">登陆</a>
 						</li>
 					</ul>
 				</div>
 				
 			</nav>
+			<!--<div class="jumbotron">
+				<h2>
+					Hello, world!
+				</h2>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>-->
 		</div>
 	</div>
-	<div class="row" style="background-size:100%; background:url(云层.png); height: 120px; margin-top: 50px;">
-		
-	</div>
-	<div class="row messageBox" style="text-align: left; background-color: none; border-radius: 5px;">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-12">
-					<font size="5">个人信息</font>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 leftBox" style="height: 30px; line-height: 30px;">
-					<font size="4">昵称：</font>
-				</div>
-				<div class="col-md-9 rightBox">
-					<input type="text" style="padding: 3px 3px 3px 3px; height: 30px; line-height: 30px;" size="32" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 leftBox" style="height: 30px; line-height: 30px;">
-					<font size="4">用户名：</font>
-				</div>
-				<div class="col-md-9 rightBox">
-					<font size="4">bili_7380366988</font>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 leftBox" style="height: 30px; line-height: 30px;">
-					<font size="4">我的简介：</font>
-				</div>
-				<div class="col-md-9 rightBox">
-					<textarea name="" cols="40" rows="3"></textarea	>
-				</div>
-			</div>
-			<script>
-				$(function(){
-					$("#datepicker").datepicker();
-				})
-			</script>
-			<div class="row">
-				<div class="col-md-3 leftBox" style="height: 30px; line-height: 30px;">
-					<font size="4">出生日期：</font>
-				</div>
-				<div class="col-md-9 rightBox">
-					<input type="text" id="datepicker" />
-				</div>
-			</div>
-			<script>
-				var index = 1;
-				var line = "#sex0";
-				var line2 = "";
-				$(function(){
-					$("#sex01").click(function(){
-						if (index != 1)
-						{
-							line2 = line + index;
-							$(line2).css("background-color", " #c8c8c8");
-							line2 = line + index + " font";
-							$(line2).css("color", "black");
-							$("#sex01").css("background-color", "#6699ff");
-							$("#sex01 font").css("color", "#fff");
-							index = 1;
-						}
-					})
-				})
-				$(function(){
-					$("#sex02").click(function(){
-						if (index != 2)
-						{
-							line2 = line + index;
-							$(line2).css("background-color", " #c8c8c8");
-							line2 = line + index + " font";
-							$(line2).css("color", "black");
-							$("#sex02").css("background-color", "#6699ff");
-							$("#sex02 font").css("color", "#fff");
-							index = 2;
-						}
-					})
-				})
-				$(function(){
-					$("#sex03").click(function(){
-						if (index != 3)
-						{
-							line2 = line + index;
-							$(line2).css("background-color", " #c8c8c8");
-							line2 = line + index + " font";
-							$(line2).css("color", "black");
-							$("#sex03").css("background-color", "#6699ff");
-							$("#sex03 font").css("color", "#fff");
-							index = 3;
-						}
-					})
-				})
-			</script>
-			<div class="row">
-				<div class="col-md-3 leftBox" style="height: 30px; line-height: 30px;">
-					<font size="4">性别：</font>
-				</div>
-				<div class="col-md-9 rightBox">
-					<div style="float: left; margin-top: 5px; margin-right:10px; height:20px; width: 30px; background-color: #6699ff; text-align: center; border-radius: 4px;cursor:pointer;" id="sex01">
-						<font color="white">男</font>
-					</div>
-					<div style="float: left; margin-top: 5px; margin-right:10px; height:20px; width: 30px; background-color: #c8c8c8; text-align: center; border-radius: 4px;cursor:pointer;" id="sex02">
-						<font color="black">女</font>
-					</div>
-					<div style="float: left; margin-top: 5px; margin-right:10px; height:20px; width: 40px; background-color: #c8c8c8; text-align: center; border-radius: 4px;cursor:pointer;" id="sex03">
-						<font color="black">保密</font>
-					</div>
-				</div>
-			</div>
-			<div class="row" style="">
-				<div class="col-md-3 leftBox" style="height: 30px; line-height: 30px;">
-				</div>
-				<div class="col-md-9 rightBox">
-					<button type="button" class="btn btn-success" style="width: 200px; height: 40px;">保存</button>
-				</div>
-			</div>
+	<!--><div class="row" style="height: 200px;">	<!-- 首页大图片 
+		<div class="col-md-12" >
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
 		</div>
-	</div>
+	</div>-->
 	
-	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 60px;">
+	<div class="row" style="margin-top: 70px; margin-left: 0px; margin-right: 0px;">
+		<div class="col-md-3" style="background-color: #ffffff; border: 1px solid #d2d2d2;">
+			<h3 style="margin-bottom: 40px;">消息中心</h3>
+			<ul class="list-unstyled">
+				<li style="margin-bottom: 20px;">
+					<font size="4"><a href="message1.html"><span>系统消息</span></a></font>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<font size="4"><a href="message2.html"><span>回复我的</span></a></font>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<font size="4"><a href="message3.html"><span>@我的</span></a></font>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<font size="4"><a href="message4.html" style="color: #6699ff;">留言簿</span></a></font>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<font size="4"><a href="message5.html">收到的赞</a></font>	
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9" style="padding: 0px 0px 0px 20px;">
+			<div class="messageBox">
+				<h4 style="font-weight: bold ;"><span>漫道运营：漫道双周争霸赛！全年征稿！ </span></h4><font color="#959595">2016-03-30 11:19</font><br />
+				<font color="#959595" size="1">1@提到我的主题：“回复：漫道双周刊争霸赛！成为漫画家就在今...” > 漫道吧</font>
+			</div>
+			<div class="messageBox">
+				<h4 style="font-weight: bold ;"><span>文华轮回：</span></h4><font color="#959595">2016-10-23 12:36</font><br />
+				<font color="#959595" size="1">@提到我的主题：“回复：2014年全国重点中学被北大清华录取人...” > 中华城市吧</font>
+			</div>
+			<div class="messageBox">
+				<h4 style="font-weight: bold ;"><span>闻虞兮s：</span></h4><font color="#959595">2016-07-17 00:03</font><br />
+				<font color="#959595" size="1">@提到我的主题：“回复：【剧本】要的人私聊” > 漫画家吧</font>
+			</div>
+			
+		</div>
+	</div>
+		
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
 	</div>
 	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
 		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
 	</div>
+	<div class="row" style="height: 60px;">
+	</div>
 </div>
-	<img src="卡通树.PNG" style="margin-left: 0px; position: absolute; left: 900px; top: 270px; z-index:-1; width: 385px; height: 650px;"></img>
-	<img src="卡通树2.PNG" style="margin-left: 0px; position: absolute; left: 200px; top: 370px; z-index:-1; width: 285px; height: 550px;"></img>
 </div>
 
     <script src="js/bootstrap.min.js"></script>
