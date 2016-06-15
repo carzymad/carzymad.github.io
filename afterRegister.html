@@ -22,16 +22,28 @@
     <script src="jquery-ui/jquery-ui.js"></script>
     <!--<link rel="stylesheet" href="style.css">-->
 	  <script src="js/myselfs.js"></script>
-	
+
 	<style>
 	
-	.baseBox {
-		padding: 10px 10px 10px 10px;
-		margin-bottom: 20px;
-		border: solid 1px #b4b4b4;
-		background-color: #fff;
-	}
+	fieldset {
+      border: 0;
+	  margin-top: 0px;
+	  float: left;
+	  
+    }
+    label {
+      display: block;
+      margin: 0px 0 0 0;
+    }
+    select {
+      width: 100px;
+	  background-color: #fff;
+    }
+    .overflow {
+      height: 200px;
+    }
 
+	
 	a {
 		color: #757575;
 	}
@@ -63,24 +75,23 @@
 
 	</style>
 
+
   <script>
   $(function() {
     $( "#menu" ).menu();
   });
   </script>
 
-  </style>
   <script>
   $(function() {
-    $( ".ui-widget-content" ).draggable();
-  });
-  </script>
-
-  <script>
-  $(function() {
-    $( "#progressbar" ).progressbar({
-      value: 78
-    });
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
   });
   </script>
 
@@ -163,9 +174,9 @@
     }
   };
   </script>
-
+	
   </head>
-  <body style="background-color: #f9f9f9">
+  <body style="background-color: #fff">
 
    <body style="background-color: #f9f9f9">
   <div class="hint" id="hint">陈家乐</div>
@@ -216,14 +227,13 @@
 
 
     <div class="container" style="width: 1024px;">
-	<div class="row navbar-fixed-top" style="background-color: #474747; padding: 0 150px 0 150px;">
+	<div class="row navbar-fixed-top" style="background-color: #fff; border:solid 1px #b4b4b4;">
 		<div class="col-md-12">
-			<nav class="navbar" role="navigation" style="margin-bottom:0px;">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
 				<div class="navbar-header">
-					 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="index.html" style="color: #c2c2c2;">大学生公益服务信息平台</a>
+					</button> <a class="navbar-brand" href="index.html" style="color: #000;"><strong>大学生公益服务信息平台</strong></a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -270,10 +280,10 @@
 					</form>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="#"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+							<a href="#"  style="color: #474747"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"   style="color: #eeeeee">消息<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="color: #474747;">消息<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
@@ -304,10 +314,10 @@
 						</li>
 						
 						<li>
-							<a href="register.html"  style="color: #eeeeee">注册</a>
+							<a href="register.html"  style="color: #474747">注册</a>
 						</li>
 						<li>
-							<a href="#" style="color: #eeeeee" id="create-user">登陆</a>
+							<a href="#" style="color:#474747" id="create-user">登陆</a>
 						</li>
 					</ul>
 				</div>
@@ -326,159 +336,25 @@
 			</div>-->
 		</div>
 	</div>
+	<div class="row" style="background-size:100%; background:url(云层.png); height: 120px; margin-top: 50px;">
+		
+	</div>
+	<div class="row" style="text-align: center; margin-top: 0px; margin-bottom: 30px;">
+		<div class="col-md-12">
+			<div class="row">
+				
+			</div>
+		</div>
+	</div>
 	
-	<div class="row" style="margin-top: 50px;"> <!-- 头像、昵称、简介、修改简介链接 -->
-		<div class="col-md-12" style="position: relative; background-image: url('背景01.jpg');" >
-			<div  style="background-image:url('背景01.jpg');position: absolute; -webkit-filter: blur(6px);top: -3px; left: 3px; width: 400px; height: 200px;">
-			</div>
-			<div class="row" style="height: 200px; line-height: 200px;">
-				<div class="col-md-4" style="background: #transparent;">
-					<div class="row">
-						<div class="col-md-3" >
-							<img alt="Bootstrap Image Preview" src="预设头像01.jpg" class="img-circle" style="width: 70px; height: 70px;" />
-						</div>
-						<div class="col-md-9" style="line-height: 20px; margin-top: 50px;">
-							<h4><strong>海边的斜阳</strong></h4>
-							<p>这个人很懒，没有留下任何东西</p>
-								<a href="#" style="float: right;">编辑简介>></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-8">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row" style="margin-top: 15px"> 
-		<div class="col-md-8">				<!-- 他的发起的项目、他参加的项目、他的论坛主题 -->
-			<div class="row" style="padding: 0 15px 0 0;">
-				<div class="col-md-12 baseBox">
-					<h3 style="margin-left: 100px;">他发起的项目</h3>
-					<ul class="list-unstyled" style="margin-top: 30px; margin-left: 40px; margin-right: 30px;">
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="#">西部温暖计划</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row" style="padding: 0 15px 0 0;">
-				<div class="col-md-12 baseBox">
-					<h3 style="margin-left: 100px;">他参加的项目</h3>
-					<ul class="list-unstyled" style="margin-top: 30px; margin-left: 40px; margin-right: 30px;">
-						<li>
-							<a href="project01.html" style="float: left;">甘肃支教</a><br /><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="project02.html">奉化支教</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="project03.html">公益大讲堂</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="project04.html">西部温暖计划</a>
-							
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row" style="padding: 0 15px 0 0;">
-				<div class="col-md-12 baseBox">
-					<h3 style="margin-left: 100px;">他的论坛主题</h3>
-					<ul class="list-unstyled" style="margin-top: 30px; margin-left: 40px; margin-right: 30px;">
-						<li>
-							<a href="#">西部温暖计划</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-								<font style="padding: 20px 0 0 30px;">甘肃支教项目开启，希望大家踊跃参加，活动人员不限，活动经费由校方报销。</font>
-							<hr style="margin-top: 30px; margin-bottom: 10px;" />
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">									<!-- 关系概述、他的关注、关注他的 -->
-			<div class="row">
-				<div class="col-md-12 baseBox">
-					<div style="height: 40px; line-height: 40px; margin-bottom: 20px;">
-						<font style="float: left; margin-right: 30px; margin-left: 30px;">他的关注</font><font size="4" style="float: left;"><strong>4</strong></font>
-						<font size="4" style="float: right; margin-right: 30px;"><strong>1</strong></font><font style="float: right; margin-right: 30px;">他的粉丝</font>
-					</div>
-					<div style="height: 40px;">
-						<div style="margin-left: 30px;border-radius: 4px; height: 15px; line-height: 15px;width: 20px; float: left; background-color: #33cccc; text-align: center;">
-							<font size="2" color="#fff">lv2</font>
-						</div>
-						<div id="progressbar" style="margin-left: 15px;float: left; height: 10px; width: 200px; margin-top: 4px;"></div>
-						<div style="clear: both;"></div>
-					</div>
-					<div>
-						<div style="margin-left: 30px;border-radius: 4px; height: 15px; line-height: 15px;width: 20px; float: left; background-color: #33cccc; text-align: center;">
-							<font size="2" color="#fff">ID</font>
-						</div>
-						<font size="2" color="#8c8c8c" style="float: left; margin-left: 15px;">14217643</font>
-						<font size="2" color="#8c8c8c" style="float: right; margin-left: 15px; margin-right: 20px;">注册于 2015-9-5</font>
-						<div style="margin-left: 30px;height: 15px; width: 15px; float: right; line-height: 15px;">
-							<img src="时钟.png" style="width: 17px; height: 17px;"></img>
-						</div>
-						<div style="clear: both;"></div>
-					</div>
-					<hr style="margin-left: 10px; margin-right: 10px" />
-					<div>
-						<div style="margin-left: 30px;height: 15px; width: 15px; float: left; line-height: 15px;">
-							<img src="蛋糕.png" style="width: 17px; height: 17px;"></img>
-						</div>
-						<font size="2" color="#8c8c8c" style="float: left; margin-left: 15px;">6-12</font>
-						<font size="2" color="#8c8c8c" style="float: right; margin-left: 15px; margin-right: 20px;">浙江省 宁波市</font>
-						<div style="margin-left: 30px;height: 15px; width: 15px; float: right; line-height: 15px;">
-							<img src="坐标.png" style="width: 17px; height: 17px;"></img>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 baseBox">
-					<font size="4"><strong>关注4人</strong></font>
-					<hr />
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像01.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user02.html">crazy_mad</a></strong></font>
-						
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 50px; height: 50px;margin-left: 20px;" src="头像05.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user03.html">海边的斜阳</a></strong></font>
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像03.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user04.html">宁工社联</a></strong></font>
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 45px; height: 45px;margin-left: 20px;" src="头像04.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user05.html">宁工学生会</a></strong></font>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 baseBox">
-					<font size="4"><strong>粉丝1人</strong></font>
-					<hr />
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像01.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user02.html">crazy_mad</a></strong></font>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 60px;">
 	</div>
 	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
 		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
 	</div>
-	<div class="row" style="height: 60px;">
-	</div>
 </div>
+	<img src="卡通树.PNG" style="margin-left: 0px; position: absolute; left: 900px; top: 270px; z-index:-1; width: 385px; height: 650px;"></img>
+	<img src="卡通树2.PNG" style="margin-left: 0px; position: absolute; left: 200px; top: 370px; z-index:-1; width: 285px; height: 550px;"></img>
 </div>
 
     <script src="js/bootstrap.min.js"></script>

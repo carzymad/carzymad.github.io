@@ -22,10 +22,12 @@
     <script src="jquery-ui/jquery-ui.js"></script>
     <!--<link rel="stylesheet" href="style.css">-->
 	  <script src="js/myselfs.js"></script>
-	
+
 	<style>
 	
-	.baseBox {
+	
+ 
+	.messageBox {
 		padding: 10px 10px 10px 10px;
 		margin-bottom: 20px;
 		border: solid 1px #b4b4b4;
@@ -63,24 +65,10 @@
 
 	</style>
 
+
   <script>
   $(function() {
     $( "#menu" ).menu();
-  });
-  </script>
-
-  </style>
-  <script>
-  $(function() {
-    $( ".ui-widget-content" ).draggable();
-  });
-  </script>
-
-  <script>
-  $(function() {
-    $( "#progressbar" ).progressbar({
-      value: 78
-    });
   });
   </script>
 
@@ -216,7 +204,7 @@
 
 
     <div class="container" style="width: 1024px;">
-	<div class="row navbar-fixed-top" style="background-color: #474747; padding: 0 150px 0 150px;">
+	<div class="row navbar-fixed-top" style="background-color: #474747; padding: 0 150px 0 150px">
 		<div class="col-md-12">
 			<nav class="navbar" role="navigation" style="margin-bottom:0px;">
 				<div class="navbar-header">
@@ -326,188 +314,86 @@
 			</div>-->
 		</div>
 	</div>
+	<!--><div class="row" style="height: 200px;">	<!-- 首页大图片 
+		<div class="col-md-12" >
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
+		</div>
+	</div>-->
+	<div class="row" style="height: 200px; margin-top: 50px;">	<!-- 首页大图片 -->
+		<div class="col-md-12" style=" padding: 0px 0px 0px 0px;">
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
+		</div>
+	</div>
 	
-	<div class="row" style="margin-top: 50px;"> <!-- 头像、昵称、简介、修改简介链接 -->
-		<div class="col-md-12" style="position: relative; background-image: url('背景01.jpg');" >
-			<div  style="background-image:url('背景01.jpg');position: absolute; -webkit-filter: blur(6px);top: -3px; left: 3px; width: 400px; height: 200px;">
+	<div class="row" style="margin-left: 0px; margin-right: 0px; margin-top: 70px; padding: 0 0 0 0;">
+		<div class="col-md-3" style="background-color: #ffffff; border: 1px solid #d2d2d2; padding: 15px 15px 15px 15px;">
+			<font size="4" style="">项目发起人</font>
+			<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+				<a href="user01.html"><img src="头像02.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+				<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="user01.html">crazy_mad</a></strong></font>
 			</div>
-			<div class="row" style="height: 200px; line-height: 200px;">
-				<div class="col-md-4" style="background: #transparent;">
-					<div class="row">
-						<div class="col-md-3" >
-							<img alt="Bootstrap Image Preview" src="预设头像01.jpg" class="img-circle" style="width: 70px; height: 70px;" />
-						</div>
-						<div class="col-md-9" style="line-height: 20px; margin-top: 50px;">
-							<h4><strong>宁工团委</strong></h4>
-							<p>这个人很懒，没有留下任何东西</p>
-								<a href="#" style="float: right;">编辑简介>></a>
-						</div>
+			<hr />
+			
+			<font size="4" style="">项目参与人</font>
+			<ul class="list-unstyled" style="margin-left: 20px; margin-top: ">
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user02.html"><img src="头像01.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr02.html">宁工团委</a></strong></font>
 					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user03.html"><img src="头像03.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr03.html">宁工社联</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user04.html"><img src="头像04.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr04.html">宁工学生会</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user05.html"><img src="头像05.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr05.html">海边的斜阳</a></strong></font>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9" style="padding: 0px 0px 0px 15px">
+			<div class="messageBox" style="padding: 20px 20px 20px 20px;">
+				<div style="text-align: center; margin-bottom: 70px;">
+					<h3 style="margin-bottom: 0px;"><font color="#cc0033"><strong>公益大讲堂</strong></font></h3> <br />
+					<font style="padding: 0px 10px 0 10px;" color="#616161">浏览次数:20</font>
+					<font style="padding: 0px 10px 0 10px;" color="#616161">更新时间:2015-04-01 14:22:38</font>
+					<font style="padding: 0px 10px 0 10px;" color="#616161">编辑:admin</font>
 				</div>
-				<div class="col-md-8">
-				</div>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“社区公益大讲堂”项目，是由北京公益服务发展促进会于2007年发起的，组织各领域专家、学者，面向北京市社区居民、高校大学生、机关单位工作人员、企事业单位职员宣传公益理念，传播公益文化的志愿服务讲座。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“社区公益大讲堂”通过开展主题讲座、公益项目展示、交流互动、公益资源对接等活动，着力打造一个国内具有较大影响力的集“公益文化传播、公益项目展示、公益人才培养和公益资源对接”四位一体的社会组织服务平台。团结、凝聚、联系、吸纳更多爱心人士、专家学者、社会组织，积极参与社会建设，弘扬主旋律，践行北京精神，推动社会主义价值体系建设，为构建和谐社区服务。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “社区公益大讲堂”坚持全面贯彻落实中共十八大精神，以邓小平理论、“三个代表”重要思想、科学发展观为指导，着力推进学习型社区建设，以促进社区文化、社区公益事业的长足发展。“十八大”《报告》中指出，“文化是民族的血脉，是人民的精神家园。全面建成小康社会，实现中华民族伟大复兴，必须推动社会主义文化大发展大繁荣，兴起社会主义文化建设新高潮，提高国家文化软实力，发挥文化引领风尚、教育人民、服务社会、推动发展的作用”。“公益大讲堂”坚持为社会主义核心价值体系建设服务，广泛开展理想信念宣传教育，大力弘扬民族精神和时代精神，深入开展爱国主义、集体主义、社会主义教育，丰富人民精神世界，增强人民精神力量。倡导富强、民主、文明、和谐，倡导自由、平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行社会主义核心价值观，推动中国特色社会主义理论体系进教材进课堂进头脑。坚持正确导向，提高引导能力，壮大主流思想舆论，为弘扬主旋律，践行北京精神，建设首善之都服务。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、公益理念传播功能。通过与媒体合作，借助网络媒介，把“公益大讲堂”关于公益服务的探索向社会广泛传播，营造全社会关注慈善公益活动的良好氛围。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;咨询联络：010-82023017、18614049851、刘婧女士</font> <br /> <br />
+				<font>一、项目名称：全民阅读之读书漂流</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实施周期：1年</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金额度：52700元</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务人群：地区单位和居民</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容描述：以“阅读·漂流·分享”为主题的“德胜书苑”年度读书活动，依托“今日德胜”报和微信公众平台，通过线上互动报名和读书沙龙的线下心得分享，每两个月一个主题，带领地区青年、居民围绕一本好书，一起重温翻阅书本的快乐，体验握笔书写的畅快，感受面对面交流的温暖。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;预期指标：全年六次，每两个月一个主题，设四个漂流岛。在4月25日全民阅读日前举办启动仪式。受众群体2000人，面向地区单位和居民。围绕一本好书，一起重温翻阅书本的快乐，体验握笔书写的畅快，感受面对面交流的温暖。通过读书漂流，阅读分享，让更多的德胜人加入到快乐的读书活动中来。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 承接要求：承接单位限定为登记类社会组织（须为西城区或市级）或服务类企业。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评估方式：由第三方参与项目跟踪评估、中末期评估。</font> <br /><br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				
 			</div>
+			
 		</div>
 	</div>
-
-	<div class="row" style="margin-top: 15px"> 
-		<div class="col-md-8">				<!-- 他的发起的项目、他参加的项目、他的论坛主题 -->
-			<div class="row" style="padding: 0 15px 0 0;">
-				<div class="col-md-12 baseBox">
-					<h3 style="margin-left: 100px;">他发起的项目</h3>
-					<ul class="list-unstyled" style="margin-top: 30px; margin-left: 40px; margin-right: 30px;">
-						<li>
-							<a href="project01.html" style="float: left;">甘肃支教</a><br /><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="#">奉化支教</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="#">公益大讲堂</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="#">西部温暖计划</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row" style="padding: 0 15px 0 0;">
-				<div class="col-md-12 baseBox">
-					<h3 style="margin-left: 100px;">他参加的项目</h3>
-					<ul class="list-unstyled" style="margin-top: 30px; margin-left: 40px; margin-right: 30px;">
-						<li>
-							<a href="project01.html" style="float: left;">甘肃支教</a><br /><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="project02.html">奉化支教</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="project03.html">公益大讲堂</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" /><a href="project04.html">西部温暖计划</a>
-							
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row" style="padding: 0 15px 0 0;">
-				<div class="col-md-12 baseBox">
-					<h3 style="margin-left: 100px;">他的论坛主题</h3>
-					<ul class="list-unstyled" style="margin-top: 30px; margin-left: 40px; margin-right: 30px;">
-						<li>
-							<hr style="margin-top: 10px; margin-bottom: 10px;" />
-							<a href="#" style="float: left; ">甘肃支教项目开启，希望大家踊跃参加</a><br /><hr style="margin-top: 10px; margin-bottom: 10px;" />
-								<font style="padding: 20px 0 0 30px;">甘肃支教项目开启，希望大家踊跃参加，活动人员不限，活动经费由校方报销。</font>
-							<hr style="margin-top: 30px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<a href="#">奉化支教，希望大家踊跃参加</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-								<font style="padding: 20px 0 0 30px;">甘肃支教项目开启，希望大家踊跃参加，活动人员不限，活动经费由校方报销。</font>
-							<hr style="margin-top: 30px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<a href="#">公益大讲堂</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-								<font style="padding: 20px 0 0 30px;">甘肃支教项目开启，希望大家踊跃参加，活动人员不限，活动经费由校方报销。</font>
-							<hr style="margin-top: 30px; margin-bottom: 10px;" />
-						</li>
-						<li>
-							<a href="#">西部温暖计划</a><hr style="margin-top: 10px; margin-bottom: 10px;" />
-								<font style="padding: 20px 0 0 30px;">甘肃支教项目开启，希望大家踊跃参加，活动人员不限，活动经费由校方报销。</font>
-							<hr style="margin-top: 30px; margin-bottom: 10px;" />
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">									<!-- 关系概述、他的关注、关注他的 -->
-			<div class="row">
-				<div class="col-md-12 baseBox">
-					<div style="height: 40px; line-height: 40px; margin-bottom: 20px;">
-						<font style="float: left; margin-right: 30px; margin-left: 30px;">他的关注</font><font size="4" style="float: left;"><strong>4</strong></font>
-						<font size="4" style="float: right; margin-right: 30px;"><strong>3</strong></font><font style="float: right; margin-right: 30px;">他的粉丝</font>
-					</div>
-					<div style="height: 40px;">
-						<div style="margin-left: 30px;border-radius: 4px; height: 15px; line-height: 15px;width: 20px; float: left; background-color: #33cccc; text-align: center;">
-							<font size="2" color="#fff">lv2</font>
-						</div>
-						<div id="progressbar" style="margin-left: 15px;float: left; height: 10px; width: 200px; margin-top: 4px;"></div>
-						<div style="clear: both;"></div>
-					</div>
-					<div>
-						<div style="margin-left: 30px;border-radius: 4px; height: 15px; line-height: 15px;width: 20px; float: left; background-color: #33cccc; text-align: center;">
-							<font size="2" color="#fff">ID</font>
-						</div>
-						<font size="2" color="#8c8c8c" style="float: left; margin-left: 15px;">14217643</font>
-						<font size="2" color="#8c8c8c" style="float: right; margin-left: 15px; margin-right: 20px;">注册于 2015-9-5</font>
-						<div style="margin-left: 30px;height: 15px; width: 15px; float: right; line-height: 15px;">
-							<img src="时钟.png" style="width: 17px; height: 17px;"></img>
-						</div>
-						<div style="clear: both;"></div>
-					</div>
-					<hr style="margin-left: 10px; margin-right: 10px" />
-					<div>
-						<div style="margin-left: 30px;height: 15px; width: 15px; float: left; line-height: 15px;">
-							<img src="蛋糕.png" style="width: 17px; height: 17px;"></img>
-						</div>
-						<font size="2" color="#8c8c8c" style="float: left; margin-left: 15px;">6-12</font>
-						<font size="2" color="#8c8c8c" style="float: right; margin-left: 15px; margin-right: 20px;">浙江省 宁波市</font>
-						<div style="margin-left: 30px;height: 15px; width: 15px; float: right; line-height: 15px;">
-							<img src="坐标.png" style="width: 17px; height: 17px;"></img>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 baseBox">
-					<font size="4"><strong>关注4人</strong></font>
-					<hr />
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像01.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user02.html">crazy_mad</a></strong></font>
-						
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 50px; height: 50px;margin-left: 20px;" src="头像02.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user03.html">海边的斜阳</a></strong></font>
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像03.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user01.html">宁工社联</a></strong></font>
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 45px; height: 45px;margin-left: 20px;" src="头像04.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user01.html">宁工学生会</a></strong></font>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 baseBox">
-					<font size="4"><strong>粉丝4人</strong></font>
-					<hr />
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 50px; height: 50px;margin-left: 20px;" src="头像02.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user03.html">海边的斜阳</a></strong></font>
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像01.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user02.html">crazy_mad</a></strong></font>
-						
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 45px; height: 45px;margin-left: 20px;" src="头像04.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user01.html">宁工学生会</a></strong></font>
-					</div>
-					<div style="height: 50px; line-height: 50px;">
-						<img style="float: left; width: 40px; height: 40px;margin-left: 20px;" src="头像03.jpg" class="img-circle"></img>
-						<font style="float: left;margin-left: 10px;" size="4"><strong><a href="user01.html">宁工社联</a></strong></font>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+		
 	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
 	</div>
 	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
