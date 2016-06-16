@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>大学生公益服务信息平台</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/myselfs.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	
+	
+	
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="style.css">-->
+	  <script src="js/myselfs.js"></script>
+
+	<style>
+	
+	fieldset {
+      border: 0;
+	  margin-top: 0px;
+	  float: left;
+	  
+    }
+    label {
+      display: block;
+      margin: 0px 0 0 0;
+    }
+    select {
+      width: 100px;
+	  background-color: #fff;
+    }
+    .overflow {
+      height: 200px;
+    }
+
+	
+	a {
+		color: #757575;
+	}
+	.my_num {
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
+		background-image: url("num.png");
+		text-align: center;
+	}
+	.my_num font {
+		color: #ffffff;
+		float: left	;
+	}
+	.my_num a {
+		float: left;
+	}
+
+    label, input { display:block; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+	.ui-menu { width: 100px;}
+
+	</style>
+
+
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( ".ui-widget-content" ).draggable();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      event: "click hoverintent"
+    });
+  });
+ 
+  /*
+   * hoverIntent | Copyright 2011 Brian Cherne
+   * http://cherne.net/brian/resources/jquery.hoverIntent.html
+   * modified by the jQuery UI team
+   */
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
+  </script>
+	
+  </head>
+  <body style="background-color: #fff">
+
+   <body style="background-color: #f9f9f9">
+  <div class="hint" id="hint">陈家乐</div>
+  
+  <div class="fixed ui-widget-content" id="float" style="background-image: url('网页助手.png');"><a href="#"></a>
+    <div id="float-son">
+		<ul class="list-unstyled">
+			<li>
+				<a href="#" id="top"><img alt="Bootstrap Image Preview" src="images/gotop.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+			<li>
+				<a href="index.html" id="index"><img alt="Bootstrap Image Preview" src="images/index.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li> 
+				<a href="message1.html" id="gotomessage"><img alt="Bootstrap Image Preview" src="images/gotomessage.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="gotonavigation"><img alt="Bootstrap Image Preview" src="images/gotonavigation.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a id="_fixed"><img alt="Bootstrap Image Preview" src="images/fixed.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="bottom"><img alt="Bootstrap Image Preview" src="images/gobottom.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+		</ul>
+	</div>
+  </div>
+
+	<div id="dialog-form" title="登陆">
+	  <p class="validateTips">所有选项必填</p>
+	 
+	  <form>
+	  <fieldset>
+		<label for="name">名字</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+		<label for="password">密码</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+		<label>验证码</label>
+		<input type="text" class="text ui-widget-content ui-corner-all" />
+		<div style="text-align: top;"><img src="images/code01.png" id="_code"/>&nbsp;<a id="code_click" href="#"><font><strong>看不清楚，换一张</strong></font></a></div>
+	  </fieldset>
+	  </form>
+	</div>
+
+
+    <div class="container" style="width: 1024px;">
+	<div class="row navbar-fixed-top" style="background-color: #fff; border:solid 1px #b4b4b4;">
+		<div class="col-md-12">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="index.html" style="color: #000;"><strong>大学生公益服务信息平台</strong></a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" role="group" class="btn btn-default">
+							搜索
+						</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"  style="color: #474747"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="color: #474747;">消息<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li> 
+									<a href="message2.html">&nbsp;回复我的<div style="float: left; text-align: center;" class="my_num"><font>1</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message3.html">&nbsp;@我的<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message4.html">&nbsp;留言簿<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message5.html">&nbsp;收到的赞<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">清空</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="register.html"  style="color: #474747">注册</a>
+						</li>
+						<li>
+							<a href="#" style="color:#474747" id="create-user">登陆</a>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<!--<div class="jumbotron">
+				<h2>
+					Hello, world!
+				</h2>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>-->
+		</div>
+	</div>
+	<div class="row" style="background-size:100%; background:url(云层.png); height: 120px; margin-top: 50px;">
+	</div>
+	<div class="row" style="background-color:#dddddd; height: 50px; line-height: 50px;">
+		<div class="col-md-6">
+			<font size="4">标题</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">作者</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">点击</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">回复</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">234</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">20</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">343</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">25</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">3542</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">342</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs04.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">5434</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">277</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">867</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">434</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2563</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">203</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">5434</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">342</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">55</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">1</font>
+		</div>
+	</div>
+	
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2462</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">203</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2713</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">743</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">34</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">20</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">234</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">20</font>
+		</div>
+	</div>
+
+<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">4</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">0</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">284</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">256</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">234</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">20</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">234</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">20</font>
+		</div>
+	</div>
+
+<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">23554</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2550</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">42334</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2430</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">23434344</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2034</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">212334</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">1240</font>
+		</div>
+	</div>
+
+<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2434</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">75</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">24324</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">940</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2344</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">20</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">43253</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">540</font>
+		</div>
+	</div>
+
+<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">25434</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">542</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">54233</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">545</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">23253</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">2543</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">53134</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">4332</font>
+		</div>
+	</div>
+
+<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs01.html"><font size="4">甘肃支教项目开启</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工团委</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">24234</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">3250</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">求求大家帮助一下这位可怜的母亲，</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">23254</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">5320</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#fcfcfc; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs03.html"><font size="4">关爱自闭症儿童公益活动</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">宁工学生会</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">252334</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">25320</font>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f8f8f8; height: 50px; line-height: 49px; border-bottom: 1px solid #d9d9d9;">
+		<div class="col-md-6">
+			<a href="bbs02.html"><font size="4">2016年度IYB（改善你的企业）免费创业培训</font></a>
+		</div>
+		<div class="col-md-2">
+			<a href="user01.html"><font size="4">海边的斜阳</font></a>
+		</div>
+		<div class="col-md-2">
+			<font size="4">53234</font>
+		</div>
+		<div class="col-md-2">
+			<font size="4">5320</font>
+		</div>
+	</div>
+
+
+
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 60px;">
+	</div>
+	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
+		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
+	</div>
+</div>
+	<!--<img src="卡通树.PNG" style="margin-left: 0px; position: absolute; left: 900px; top: 270px; z-index:-1; width: 385px; height: 650px;"></img>
+	<img src="卡通树2.PNG" style="margin-left: 0px; position: absolute; left: 200px; top: 370px; z-index:-1; width: 285px; height: 550px;"></img>-->	
+</div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

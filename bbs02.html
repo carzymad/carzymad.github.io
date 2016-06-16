@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>大学生公益服务信息平台</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/myselfs.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	
+	
+	
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="style.css">-->
+	  <script src="js/myselfs.js"></script>
+
+	<style>
+	
+	fieldset {
+      border: 0;
+	  margin-top: 0px;
+	  float: left;
+	  
+    }
+    label {
+      display: block;
+      margin: 0px 0 0 0;
+    }
+    select {
+      width: 100px;
+	  background-color: #fff;
+    }
+    .overflow {
+      height: 200px;
+    }
+
+	
+	a {
+		color: #757575;
+	}
+	.my_num {
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
+		background-image: url("num.png");
+		text-align: center;
+	}
+	.my_num font {
+		color: #ffffff;
+		float: left	;
+	}
+	.my_num a {
+		float: left;
+	}
+
+    label, input { display:block; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+	.ui-menu { width: 100px;}
+
+	</style>
+
+
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( ".ui-widget-content" ).draggable();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      event: "click hoverintent"
+    });
+  });
+ 
+  /*
+   * hoverIntent | Copyright 2011 Brian Cherne
+   * http://cherne.net/brian/resources/jquery.hoverIntent.html
+   * modified by the jQuery UI team
+   */
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
+  </script>
+	
+  </head>
+  <body style="background-color: #f5f9fa">
+
+   <body style="background-color: #f9f9f9">
+  <div class="hint" id="hint">陈家乐</div>
+  
+  <div class="fixed ui-widget-content" id="float" style="background-image: url('网页助手.png');"><a href="#"></a>
+    <div id="float-son">
+		<ul class="list-unstyled">
+			<li>
+				<a href="#" id="top"><img alt="Bootstrap Image Preview" src="images/gotop.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+			<li>
+				<a href="index.html" id="index"><img alt="Bootstrap Image Preview" src="images/index.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li> 
+				<a href="message1.html" id="gotomessage"><img alt="Bootstrap Image Preview" src="images/gotomessage.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="gotonavigation"><img alt="Bootstrap Image Preview" src="images/gotonavigation.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a id="_fixed"><img alt="Bootstrap Image Preview" src="images/fixed.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="bottom"><img alt="Bootstrap Image Preview" src="images/gobottom.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+		</ul>
+	</div>
+  </div>
+
+	<div id="dialog-form" title="登陆">
+	  <p class="validateTips">所有选项必填</p>
+	 
+	  <form>
+	  <fieldset>
+		<label for="name">名字</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+		<label for="password">密码</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+		<label>验证码</label>
+		<input type="text" class="text ui-widget-content ui-corner-all" />
+		<div style="text-align: top;"><img src="images/code01.png" id="_code"/>&nbsp;<a id="code_click" href="#"><font><strong>看不清楚，换一张</strong></font></a></div>
+	  </fieldset>
+	  </form>
+	</div>
+
+
+    <div class="container" style="width: 1024px;">
+	<div class="row navbar-fixed-top" style="background-color: #fff; border:solid 1px #b4b4b4;">
+		<div class="col-md-12">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="index.html" style="color: #000;"><strong>大学生公益服务信息平台</strong></a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" role="group" class="btn btn-default">
+							搜索
+						</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"  style="color: #474747"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="color: #474747;">消息<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li> 
+									<a href="message2.html">&nbsp;回复我的<div style="float: left; text-align: center;" class="my_num"><font>1</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message3.html">&nbsp;@我的<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message4.html">&nbsp;留言簿<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message5.html">&nbsp;收到的赞<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">清空</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="register.html"  style="color: #474747">注册</a>
+						</li>
+						<li>
+							<a href="#" style="color:#474747" id="create-user">登陆</a>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<!--<div class="jumbotron">
+				<h2>
+					Hello, world!
+				</h2>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>-->
+		</div>
+	</div>
+	<div style="text-align: center; margin-top:100px; height: 80px; line-height: 80px;">
+		<font size="4" color="white" style="background-color: #4178b0; padding: 6px 10px 6px 10px;">
+			<strong>电子科技大学织梦支教队——请与我们携手</strong>
+		</font>
+	</div>
+	<div style="text-align: center">
+		<font size="2"><font color="red">楼主</font>：<a href="user01.html">宁工团委</a>&nbsp;&nbsp;时间：2016-06-16 17:22:00&nbsp;点击：1823&nbsp;回复：39</font>
+	</div>
+	<div class="row" style="border-radius: 4px; background-color: #eeeeee; padding: 20px 15px 20px 15px; margin-bottom: 20px;">
+		<font size="4" style="margin-left: 33px;">我们是电子科技大学织梦支教队，今年暑假将前往四川凉山彝族自治州昭觉齿可波西乡中心校，贵州册亨县岩架村和册亨县纳汪小学进行暑期支教，现在正在募集资金与物资。我们希望可以为他们带去图书和衣物。</font> <br />
+		<font size="4" style="margin-left: 33px;">我很感谢能够作为支教队的队员为那些正处于贫苦中的孩子们做些什么，即使我能做的是这样的微不足道。那是一群值得我们去珍惜与守护的孩子，他们没有优越的生活条件，没有先进的教学设备，甚至没有老师，没有父母。我们可以肆意地享受丰衣足食的生活，汲取知识，憧憬梦想，而他们，只能在破旧的教室里做着遥远的梦，守着贫瘠的土地和难以跨越的大山苦恼着每天的温饱。可是，他们和我们一样热切地渴望着知识和梦想。他们很坚强，很乐观，很朴实，这样美好的孩子们值得拥有更好的生活和学习条件。爱心不分大小，每一份爱都会是照亮他们阴暗天空的一缕阳光。愿有爱心人士与我们携手，无论东西多少，让我们一起托起他们梦想飞翔的翅膀！有意向者，请与我们联系。</font> <br />
+		<font size="4" style="margin-left: 33px;">1 凉山彝族自治州昭觉齿可波西乡中心校学生数量900多人，42个孤儿，接受暑期支教的主要是五年级学生，大概100多人，家庭比较困难，希望有新衣服。交通没有问题，住宿没有问题，我们需要自己做饭，包括做一部分不能回家吃饭的学生的饭。学校基础设施比较破旧，希望有一个阅览室，需要图书和桌椅。</font> <br />
+		<font size="4" style="margin-left: 33px;"></font> <br />
+	</div>	
+
+	<div style="text-align: center">
+		<font size="2"><font color="red">楼主</font>：<a href="user01.html">宁工团委</a>&nbsp;&nbsp;时间：2016-06-16 17:22:00&nbsp;点击：1823&nbsp;回复：39</font>
+	</div>
+	<div class="row" style="border-radius: 4px; background-color: #eeeeee; padding: 20px 15px 20px 15px; margin-bottom: 20px;">
+		<font size="4" style="margin-left: 33px;">线路图 ▼</font> <br />
+	</div>
+
+	<div style="text-align: center">
+		<font size="2"><font color="red">楼主</font>：<a href="user01.html">宁工团委</a>&nbsp;&nbsp;时间：2016-06-16 17:22:00&nbsp;点击：1823&nbsp;回复：39</font>
+	</div>
+	<div class="row" style="border-radius: 4px; background-color: #eeeeee; padding: 20px 15px 20px 15px; margin-bottom: 20px;">
+		<font size="4" style="margin-left: 33px;">这一次在路上还会遇到送西瓜的大叔吗？</font> <br />
+	</div>
+
+	<div style="text-align: center;">
+		<font size="2">作者：<a href="user02.html">crazy_mad</a>&nbsp;&nbsp;时间：2016-06-17 14:22:00&nbsp;点击：18&nbsp;回复：3</font>
+	</div>
+	<div class="row" style="border-radius: 4px; background-color: #eeeeee; padding: 20px 15px 20px 15px; margin-bottom: 20px;">
+		<font size="4" style="margin-left: 33px;">楼主，请问您联系到没？可不可以给我介绍一个途径，我也想做一对一的资助</font>
+	</div>	
+
+	<div style="text-align: center;">
+		<font size="2">作者：<a href="user03.html">海边的斜阳</a>&nbsp;&nbsp;时间：2016-06-17 14:24:00&nbsp;点击：18&nbsp;回复：1</font>
+	</div>
+	<div class="row" style="border-radius: 4px; background-color: #eeeeee; padding: 20px 15px 20px 15px; margin-bottom: 20px;">
+		<font size="4" style="margin-left: 33px;">我是一个热于公益的社会普通人士 一直有个火热的心</font>
+	</div>	
+
+	<div style="text-align: center;">
+		<font size="2">作者：<a href="user03.html">海边的斜阳</a>&nbsp;&nbsp;时间：2016-06-17 14:27:00&nbsp;点击：18&nbsp;回复：0</font>
+	</div>
+	<div class="row" style="border-radius: 4px; background-color: #eeeeee; padding: 20px 15px 20px 15px; margin-bottom: 20px;">
+		<font size="4" style="margin-left: 0px;">2016年8月8日内</font><br />
+		<font size="4" style="margin-left: 0px;">蒙古多伦县到北京</font><br />
+		<font size="4" style="margin-left: 0px;">这不仅是个数字</font><br />
+		<font size="4" style="margin-left: 0px;">更是一亿人的心愿</font><br />
+		<font size="4" style="margin-left: 0px;">迈出脚步，穿过草原</font><br />
+		<font size="4" style="margin-left: 0px;">让改变从这400公里开始</font><br />
+		<font size="4" style="margin-left: 0px;">益行去北京，带来人生的改变</font><br />	
+
+	</div>	
+
+
+
+
+
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 60px;">
+	</div>
+	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
+		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
+	</div>
+</div>
+	<!--<img src="卡通树.PNG" style="margin-left: 0px; position: absolute; left: 900px; top: 270px; z-index:-1; width: 385px; height: 650px;"></img>
+	<img src="卡通树2.PNG" style="margin-left: 0px; position: absolute; left: 200px; top: 370px; z-index:-1; width: 285px; height: 550px;"></img>-->	
+</div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
