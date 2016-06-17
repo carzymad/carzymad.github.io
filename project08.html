@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>大学生公益服务信息平台</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/myselfs.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	
+	
+	
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="style.css">-->
+	  <script src="js/myselfs.js"></script>
+
+	<style>
+	
+	
+ 
+	.messageBox {
+		padding: 10px 10px 10px 10px;
+		margin-bottom: 20px;
+		border: solid 1px #b4b4b4;
+		background-color: #fff;
+	}
+
+	a {
+		color: #757575;
+	}
+	.my_num {
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
+		background-image: url("num.png");
+		text-align: center;
+	}
+	.my_num font {
+		color: #ffffff;
+		float: left	;
+	}
+	.my_num a {
+		float: left;
+	}
+
+    label, input { display:block; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+	.ui-menu { width: 100px;}
+
+	</style>
+
+
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( ".ui-widget-content" ).draggable();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      event: "click hoverintent"
+    });
+  });
+ 
+  /*
+   * hoverIntent | Copyright 2011 Brian Cherne
+   * http://cherne.net/brian/resources/jquery.hoverIntent.html
+   * modified by the jQuery UI team
+   */
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
+  </script>
+
+  </head>
+  <body style="background-color: #f9f9f9">
+
+   <body style="background-color: #f9f9f9">
+  <div class="hint" id="hint">陈家乐</div>
+  
+  <div class="fixed ui-widget-content" id="float" style="background-image: url('网页助手.png');"><a href="#"></a>
+    <div id="float-son">
+		<ul class="list-unstyled">
+			<li>
+				<a href="#" id="top"><img alt="Bootstrap Image Preview" src="images/gotop.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+			<li>
+				<a href="index.html" id="index"><img alt="Bootstrap Image Preview" src="images/index.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li> 
+				<a href="message1.html" id="gotomessage"><img alt="Bootstrap Image Preview" src="images/gotomessage.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="gotonavigation"><img alt="Bootstrap Image Preview" src="images/gotonavigation.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<!--<li>
+				<a href="#" id="closeassistant"><img alt="Bootstrap Image Preview" src="images/close.png" class="img-rounded" style="float: right;"/></a>	
+			</li>-->
+			<li>
+				<a id="_fixed"><img alt="Bootstrap Image Preview" src="images/fixed.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="bottom"><img alt="Bootstrap Image Preview" src="images/gobottom.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+		</ul>
+	</div>
+  </div>
+
+	<div id="dialog-form" title="登陆">
+	  <p class="validateTips">所有选项必填</p>
+	 
+	  <form>
+	  <fieldset>
+		<label for="name">名字</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+		<label for="password">密码</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+		<label>验证码</label>
+		<input type="text" class="text ui-widget-content ui-corner-all" />
+		<div style="text-align: top;"><img src="images/code01.png" id="_code"/>&nbsp;<a id="code_click" href="#"><font><strong>看不清楚，换一张</strong></font></a></div>
+	  </fieldset>
+	  </form>
+	</div>
+
+
+    <div class="container" style="width: 1024px;">
+	<div class="row navbar-fixed-top" style="background-color: #474747; padding: 0 150px 0 150px">
+		<div class="col-md-12">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px;">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="index.html" style="color: #c2c2c2;">大学生公益服务信息平台</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!--<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Link</a>
+						</li>
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>-->
+					
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" role="group" class="btn btn-default">
+							搜索
+						</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"   style="color: #eeeeee">消息<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li> 
+									<a href="message2.html">&nbsp;回复我的<div style="float: left; text-align: center;" class="my_num"><font>1</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message3.html">&nbsp;@我的<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message4.html">&nbsp;留言簿<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message5.html">&nbsp;收到的赞<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">清空</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="register.html"  style="color: #eeeeee">注册</a>
+						</li>
+						<li>
+							<a href="#" style="color: #eeeeee" id="create-user">登陆</a>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<!--<div class="jumbotron">
+				<h2>
+					Hello, world!
+				</h2>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>-->
+		</div>
+	</div>
+	<!--><div class="row" style="height: 200px;">	<!-- 首页大图片 
+		<div class="col-md-12" >
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
+		</div>
+	</div>-->
+	<div class="row" style="height: 200px; margin-top: 50px;">	<!-- 首页大图片 -->
+		<div class="col-md-12" style=" padding: 0px 0px 0px 0px;">
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-left: 0px; margin-right: 0px; margin-top: 70px; padding: 0 0 0 0;">
+		<div class="col-md-3" style="background-color: #ffffff; border: 1px solid #d2d2d2; padding: 15px 15px 15px 15px;">
+			<font size="4" style="">项目发起人</font>
+			<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+				<a href="user01.html"><img src="头像01.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+				<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="user01.html">宁工团委</a></strong></font>
+			</div>
+			<hr />
+			
+			<font size="4" style="">项目参与人</font>
+			<ul class="list-unstyled" style="margin-left: 20px; margin-top: ">
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user02.html"><img src="头像05.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr02.html">海边的斜阳</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user03.html"><img src="头像03.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr03.html">宁工社联</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user04.html"><img src="头像04.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr04.html">宁工学生会</a></strong></font>
+					</div>
+				</li>
+				<li style="margin-bottom: 20px;">
+					<div style="height: 40px; line-height: 40px; margin-top:10px; margin-left: 10px;">
+						<a href="user05.html"><img src="头像02.jpg" style="width: 40px; height: 40px;" class="img-circle"/></a>
+						<font style="margin-top: 100px; margin-left: 20px;" ><strong><a href="uesr05.html">crazy_mad</a></strong></font>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9" style="padding: 0px 0px 0px 15px">
+			<div class="messageBox" style="padding: 20px 20px 20px 20px;">
+				<div style="text-align: center; margin-bottom: 70px;">
+					<h3 style="margin-bottom: 0px;"><font color="#cc0033"><strong>奉化支教</strong></font></h3> <br />
+					<font style="padding: 0px 10px 0 10px;" color="#616161">浏览次数:20</font>
+					<font style="padding: 0px 10px 0 10px;" color="#616161">更新时间:2015-04-01 14:22:38</font>
+					<font style="padding: 0px 10px 0 10px;" color="#616161">编辑:admin</font>
+				</div>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   北京市2011年政府购买社会组织服务项目指南昨天发布，今年市政府首次细化了购买社会公共服务项目，所购买300个公共服务项目围绕社会基本公共服务、社会公益服务、社区便民服务、社会管理服务以及社会建设决策研究信息咨询服务五方面、40个类别。社会组织可在4月6日前提出申报，获批后，为百姓服务将得到政府的资金支持。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ■群众迫切需求和新需求列入项目</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今年，市政府购买的40项服务针对百姓需求以及社会组织能够提供的服务，一方面涵盖扶老助残、支教助学等群众急需的项目，在应急救助等社会新出现的且反响良好的服务种类方面也有所拓展。北京市社会建设工作领导小组办公室主任宋贵伦昨天表示，购买服务使用社会建设专项资金向社会组织支付，分为全额购买、部分购买及奖励三种形式。项目购买将发挥填补空白、支持和引导开展公益性服务活动的作用，因此属于单位职责、已由部门预算保障的项目，则仍由原经费渠道解决。通过任何途径已由市级财政支持的项目，原则上不再作为购买对象。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ■社会组织管理推广“养事不养人”</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 从今年起，全市的社会组织管理将逐步推广“养事不养人”的原则，政府通过“枢纽型”的社会组织购买管理岗位。即由政府出资，以公开招聘的方式，录取社会组织信任的专职人员，形成专业的管理队伍。相关负责人介绍，目前全市共有团市委、市科协等22个“枢纽型”社会组织，每个组织都下属约二三百个学会、协会，以往，这些组织的秘书长、办公室主任等主要负责职务，多由相关领域内威望较高的资深人士、学术专家兼职担任，没有专职工作者负责组织、联络、管理，有的组织管理方式不够规范。在今年的项目指南中，社会管理服务类别里增加了“社会组织‘枢纽型’管理服务项目”及“专业社工管理岗位项目”，社会组织的管理岗位都将由专职社工担任，他们的奖金、补贴将由政府的专项资金承担。.2万人次，累计使200万人直接受益。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;■两年内有违法行为不得申报</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  据了解，依法登记注册、具有独立法人资格、连续两年年检达到合格及以上等级的社会组织，可以依据本指南申报项目。因违法行为被执法部门依法处罚未满两年，或因涉嫌违法违规正在接受有关部门调查的社会组织，不能作为项目申报单位。申报单位可在北京社会建设网www.bjshjs.gov.cn下载申报表，报相关市级“枢纽型”社会组织或区县社会建设工作领导小组办公室。</font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市社会建设工作领导小组办公室相关负责人表示，今年将投入资金的数额尚未确定，将视项目申报情况而定。各社会组织申报时间截止到4月6日，预计4月底可确定购买的项目内容。负责评审工作的专家库现已组建完成，申报结束后对各项目进行评审。“项目预算不得用于提高项目单位工作人员待遇和改善自身办公条件的支出。”相关负责人强调。 </font> <br /> <br />
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;转载自：  凤凰网</font> <br /> <br />
+				
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				
+			</div>
+			
+		</div>
+	</div>
+		
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
+	</div>
+	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
+		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
+	</div>
+	<div class="row" style="height: 60px;">
+	</div>
+</div>
+</div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

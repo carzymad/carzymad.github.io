@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>大学生公益服务信息平台</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/myselfs.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	
+	
+	
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="style.css">-->
+	
+	<style>
+
+ 
+
+	a {
+		color: #757575;
+	}
+	.my_num {
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
+		background-image: url("num.png");
+		text-align: center;
+	}
+	.my_num font {
+		color: #ffffff;
+		float: left	;
+	}
+	.my_num a {
+		float: left;
+	}
+
+    label, input { display:block; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+	.ui-menu { width: 100px;}
+
+	</style>
+	  <script>
+  
+  </script>
+
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+
+  </style>
+  <script>
+  $(function() {
+    $( ".ui-widget-content" ).draggable();
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      event: "click hoverintent"
+    });
+  });
+ 
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
+  </script>
+  
+  <script src="js/myselfs.js"></script>
+  
+  </head>
+  <body style="background-color: #f9f9f9">
+  <div class="hint" id="hint">陈家乐</div>
+  
+  <div class="fixed ui-widget-content" id="float" style="background-image: url('网页助手.png');"><a href="#"></a>
+    <div id="float-son">
+		<ul class="list-unstyled">
+			<li>
+				<a href="#" id="top"><img alt="Bootstrap Image Preview" src="images/gotop.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+			<li>
+				<a href="index.html" id="index"><img alt="Bootstrap Image Preview" src="images/index.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li> 
+				<a href="message1.html" id="gotomessage"><img alt="Bootstrap Image Preview" src="images/gotomessage.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="gotonavigation"><img alt="Bootstrap Image Preview" src="images/gotonavigation.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a id="_fixed"><img alt="Bootstrap Image Preview" src="images/fixed.png" class="img-rounded" style="float: right;"/></a>	
+			</li>
+			<li>
+				<a href="#" id="bottom"><img alt="Bootstrap Image Preview" src="images/gobottom.png" class="img-rounded" style="float: right;"/></a><br />
+			</li>
+		</ul>
+	</div>
+  </div>
+    
+	<div id="dialog-form" title="登陆">
+	 
+	  <form>
+	  <fieldset>
+		<label for="name">名字</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+		<label for="password">密码</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+		<label>验证码</label>
+		<input type="text" class="text ui-widget-content ui-corner-all" />
+		<div style="text-align: top;"><img src="images/code01.png" id="_code"/>&nbsp;<a id="code_click" href="#"><font><strong>看不清楚，换一张</strong></font></a></div>
+	  </fieldset>
+	  </form>
+	</div> 
+    
+    
+    <div class="container" style="width: 1024px;">
+	<div class="row navbar-fixed-top" style="background-color: #474747;">
+		<div class="col-md-12">
+			<nav class="navbar" role="navigation" style="margin-bottom:0px; padding: 0 150px 0 150px;">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="index.html" style="color: #c2c2c2;">大学生公益服务信息平台</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" role="group" class="btn btn-default">
+							搜索
+						</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="user01.html"  style="color: #eeeeee"><!--<img src="头像.png" style="border-radius:15px; width: 25px; height: 25px;"></img>-->&nbsp;我的账户</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"   style="color: #eeeeee">消息<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="message1.html">&nbsp;系统消息<div style="float: left; text-align: center;" class="my_num"><font>2</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li> 
+									<a href="message2.html">&nbsp;回复我的<div style="float: left; text-align: center;" class="my_num"><font>1</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message3.html">&nbsp;@我的<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message4.html">&nbsp;留言簿<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li>
+									<a href="message5.html">&nbsp;收到的赞<div style="float: left; text-align: center;" class="my_num"><font>5</font></div></a>
+									<div style="clear:both;"></div>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">清空</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="register.html"  style="color: #eeeeee">注册</a>
+						</li>
+						<li>
+							<a href="#" style="color: #eeeeee" id="create-user">登陆</a>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+		</div>
+	</div>
+	<div class="row" style="height: 200px; margin-top: 50px;">	<!-- 首页大图片 -->
+		<div class="col-md-12" style=" padding: 0px 0px 0px 0px;">
+			<img alt="Bootstrap Image Preview" src="宁工校徽.png" style="flaot: left; width: 200px; height: 200px;"/>
+			<img alt="Bootstrap Image Preview" src="宁工校园.png" style="float: right;"/>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 80px;">
+		<div class="col-md-12" style="padding: 0px 0px 0px 0px;">
+			<ul class="nav nav-tabs">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="index02.html">公益动态</a>
+				</li>
+				<li>
+					<a href="index03.html">项目资源</a>
+				</li>
+				<li class="active">
+					<a href="#">企业公益</a>
+				</li>
+				<li>
+					<a href="index05.html">社区公益</a>
+				</li>
+				<li>
+					<a href="bbs.html">公益论坛</a>
+				</li>
+				<li>
+					<a href="#">关于我们</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-top: 30px;background-color: #ffff00;background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f9f9f9), to(#ffff00));">
+		<h3 style="color: #cc3333; margin-left: 30px;"><strong>企业公益</strong></h3>
+	</div>
+	<div class="row" style=" border-bottom: solid 1px #cacaca;">
+		<div class="col-md-4" style="padding: 10px 10px 10px 10px; border-left: solid 1px #cacaca; border-right: solid 1px #cacaca;">
+			<div>
+				<div style="background-image: url('jquery-ui/images/ui-bg_gloss-wave_35_f6a828_500x100 01.png'); height: 30px; line-height: 30px;">
+					<font color="white" style="margin-left: 20px;"><strong>项目发布</strong></font>
+				</div>
+				<div style="height: 10px; border-bottom: solid 2px #f8b950">
+				</div>
+				<div style="padding: 3px 3px 3px 10px; margin-top: 5px;	background-color: #e6e6e6">
+					<a href="#"><font>社会组织项目</font></a>
+				</div>
+				<div style="padding: 3px 3px 3px 10px; margin-top: 5px;	background-color: #e6e6e6	">
+					<a href="#"><font>政府公共服务项目</font></a>
+				</div>
+				<div style="padding: 3px 3px 3px 10px; margin-top: 5px;	background-color: #e6e6e6	">
+					<a href="#"><font>企业社会责任项目</font></a>
+				</div>
+				<div style="padding: 3px 3px 3px 10px; margin-top: 5px;	background-color: #e6e6e6	">
+					<a href="#"><font>优秀项目展示</font></a>
+				</div>
+				<div style="padding: 3px 3px 3px 10px; margin-top: 5px;	background-color: #e6e6e6	">
+					<a href="#"><font>项目图片展</font></a>
+				</div>
+			</div>
+			<div style="height: 30px;"></div>
+			<div>
+				<div style="background-image: url('jquery-ui/images/ui-bg_gloss-wave_35_f6a828_500x100 01.png'); height: 30px; line-height: 30px;">
+					<font color="white" style="margin-left: 20px;"><strong>公益资讯</strong></font>
+				</div>
+				<div style="height: 10px; border-bottom: solid 2px #f8b950">
+				</div>
+				<div style="margin-top: 4px;">
+					<a href="project01.html"><font>爱在西城首届公益..</font></a><font style="float: right;">2012-05-13</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project01.html"><font>现实环境下社会创..</font></a><font style="float: right;">2012-03-19</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project02.html"><font>爱在西城首届公益..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project03.html"><font>爱在西城首届公益..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project04.html"><font>北京市首个公益智..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project05.html"><font>北京市首个网络公..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project06.html"><font>专业社会组织助力....</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project07.html"><font>原创愿望树系列公..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project08.html"><font>公益智库助力慈善..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project09.html"><font>为5800万留守儿童..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project10.html"><font>深山老农16年资助..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+				<div style="">
+					<a href="project03.html"><font>民政部部长回应“..</font></a><font style="float: right;">2012-03-03</font>
+					<hr style="border-top:1px dashed #0066CC; margin-top: 3px; margin-bottom: 3px;" />
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-8" style="border-right: solid 1px #cacaca; height: 593px; padding: 10px 10px 10px 10px">
+			<div style="margin-top: 4px; margin-top: 20px">
+				<a href="project01.html"><font>2015年西城区德胜街道购买社会力量服务项目（第一批）</font></a><font style="float: right;">【2015-04-01】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project03.html"><font>2013爱在西城民生服务创新工作法及公益服务品牌推介展</font></a><font style="float: right;">【2013-03-19】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project04.html"><font>展览路社工品牌建设</font></a><font style="float: right;">【2012-09-18】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project05.html"><font>2012年北京市残疾人文化周</font></a><font style="float: right;">【2012-09-18】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project06.html"><font>美境行动—青少年环保教育行动</font></a><font style="float: right;">【2012-05-04】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project07.html"><font>祈愿花蕾朵朵绽放少儿大病救助</font></a><font style="float: right;">【2012-05-04】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project08.html"><font>机关办公室捐废献爱变废为宝</font></a><font style="float: right;">【2012-05-04】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project09.html"><font>西城区社区学习中心项目</font></a><font style="float: right;">【2012-05-04】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project10.html"><font>青年公务员爱心行动</font></a><font style="float: right;">【2012-05-04】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project02.html"><font>七彩梦青少年才艺资助项目</font></a><font style="float: right;">【2012-05-04】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project02.html"><font>计生委“幸福家庭和谐人口”项目启动仪式</font></a><font style="float: right;">【2012-04-26】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+			<div style="margin-top: 4px;">
+				<a href="project02.html"><font>35个政府公共服务项目</font></a><font style="float: right;">【2012-04-26】</font>
+				<hr style="border-top:1px dashed #0066CC; margin-top: 6px; margin-bottom: 6px;" />
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="border-bottom:solid 1px #b4b4b4; height: 100px;">
+	</div>
+	<div class="row" style="text-align: center; height: 40px; line-height: 40px;">
+		<font size="2">版权所有：宁波工程学院 电信学院计科154 陈家乐    &nbsp;&nbsp;&nbsp;想了解更多，请点击</font><a href="#" style="color: blue;"><font size="2">关于我们</font><a>
+	</div>
+	<div class="row" style="height: 60px;">
+	</div>
+</div>
+</div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
